@@ -1,0 +1,69 @@
+.container {
+  padding: 162px 356px;
+  background: var(--Criterion-Black, #191919);
+  color: #f4f4f4;
+}
+
+.header > h2 {
+  font-family: "Mazuis Display";
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.header > p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 630.51px;
+}
+
+.coreValues {
+  display: flex;
+  margin-top: 40px;
+}
+
+.coreValues > div {
+  padding: 100px 55px;
+}
+
+.coreValues > div:first-child {
+  border-right: 2.21px solid var(--Criterion-White, #f4f4f4);
+  text-align: right;
+}
+
+.coreValues > div > div {
+  margin-bottom: 98px;
+}
+
+.coreValues > div > div > h2 {
+  font-family: "Space Grotesk";
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 66.75px;
+  letter-spacing: -0.04em;
+  margin-bottom: 45px;
+}
+
+.coreValues > div > div > h4 {
+  font-family: "Space Grotesk";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 26.7px;
+  margin-bottom: 13px;
+}
+
+.coreValues > div > div > p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}

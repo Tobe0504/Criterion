@@ -1,5 +1,6 @@
 import classes from "./Header.module.css";
 import logo from "../../Assets/Images/logo.svg";
+import logoLight from "../../Assets/Images/logoLight.svg";
 import { routes } from "../../Utilities/routes";
 import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button";
@@ -36,7 +37,7 @@ const Header = ({ isDark }: HeaderProps) => {
       className={classes.container}
       style={{ backgroundColor: navBackground }}
     >
-      <img src={logo} alt="Criterion" />
+      <img src={isDark ? logoLight : logo} alt="Criterion" />
 
       {routes.map((data, i) => {
         return (

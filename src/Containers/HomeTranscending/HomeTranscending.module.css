@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 282px 222px 390px 222px;
+  position: relative;
+}
+
+.container > div:nth-child(1) {
+  flex-basis: 278px;
+}
+
+.container > div:nth-child(1) > h4 {
+  font-family: "Space Grotesk";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39.68px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.container > div:nth-child(1) > button {
+  margin-top: 1rem;
+  min-width: 220px;
+}
+
+.container > div:nth-child(2) {
+  flex: 1;
+}
+
+.container > div:nth-child(2) > p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.features {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 56px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+}
+
+.features > div {
+  flex-basis: calc(50% - 53px);
+}
+
+.features > div > h4 {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22.97px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #191919;
+}
+
+.features > div > p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #191919;
+}
+
+.container > img {
+  position: absolute;
+  right: 0;
+  top: 70%;
+  width: 1117px;
+  height: 518px;
+}

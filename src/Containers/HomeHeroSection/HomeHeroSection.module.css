@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 125px 116px;
+  position: relative;
+  min-height: calc(900px - 125px);
+}
+
+.textSection {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+.textSection > h4:not(.textSection > h4 > span:nth-child(1)) {
+  font-family: "Space Grotesk";
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 70.4px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #191919;
+}
+
+.textSection > h4 > span {
+  display: block;
+}
+
+.textSection > h4 > span:nth-child(1) {
+  font-family: "Space Grotesk";
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 70.4px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #a49031;
+}
+
+.textSection > h4 > span:nth-child(2) {
+  font-family: "Mazius Display";
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 70.4px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.textSection > button {
+  margin-top: 1.5rem;
+  min-width: 220px;
+}
+
+.container > img {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  height: 741px;
+  width: 500px;
+  z-index: 0;
+}

@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 18px 120px;
+}
+
+.container > a {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.97px;
+  color: #191919;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.container > a:hover {
+  color: #a49031;
+}
+
+.container > a:nth-child(2) {
+  margin-left: auto;
+}

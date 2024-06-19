@@ -3,15 +3,48 @@ import logo from "../../Assets/Images/logo.svg";
 import { routes } from "../../Utilities/routes";
 import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button";
+import { useEffect, useState } from "react";
 
-const Header = () => {
+type HeaderProps = {
+  isDark?: boolean;
+};
+
+const Header = ({ isDark }: HeaderProps) => {
+  // States
+  const [navBackground, setNavBackground] = useState("transparent");
+
+  // Utils
+  const handleScroll = () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (scrollY > window.innerHeight) {
+      setNavBackground(isDark ? "#191919" : "#F4F4F4");
+    } else {
+      setNavBackground("transparent");
+    }
+  };
+
+  // Effects
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      style={{ backgroundColor: navBackground }}
+    >
       <img src={logo} alt="Criterion" />
 
       {routes.map((data, i) => {
         return (
-          <Link to={data.route} key={i}>
+          <Link
+            to={data.route}
+            key={i}
+            style={isDark ? { color: "#F4F4F4" } : undefined}
+          >
             {data.title}
           </Link>
         );

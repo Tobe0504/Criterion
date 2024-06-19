@@ -4,13 +4,17 @@ import classes from "./Layout.module.css";
 
 type LayoutProps = {
   children: React.ReactNode;
+  isDark?: boolean;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, isDark }: LayoutProps) => {
   return (
     <section className={classes.container}>
-      <section className={classes.header}>
-        <Header />
+      <section
+        className={classes.header}
+        style={isDark ? { background: "#191919" } : undefined}
+      >
+        <Header isDark={isDark} />
       </section>
       <section className={classes.body}>{children}</section>
       <section className={classes.footer}>

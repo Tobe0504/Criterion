@@ -1,12 +1,20 @@
+import { useEffect } from "react";
 import Button from "../../Components/Button/Button";
 import Input from "../../Components/Input/Input";
 import TextArea from "../../Components/TextArea/TextArea";
 import classes from "./HomeSignUp.module.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomeSignUp = () => {
+  // Effects
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <section className={classes.container}>
-      <div className={classes.textSection}>
+      <div className={classes.textSection} data-aos="zoom-in-right">
         <h2>{"Interested in exploring further?".toUpperCase()}</h2>
         <p>{"Initiate a conversation today".toUpperCase()}</p>
 
@@ -49,7 +57,7 @@ const HomeSignUp = () => {
         </div>
       </div>
 
-      <form>
+      <form data-aos="zoom-in-left">
         <Input placeholder="FULL NAME" />
         <Input placeholder="PHONE" type="phone" />
         <Input placeholder="EMAIL" type="email" />

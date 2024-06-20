@@ -38,3 +38,65 @@
   margin: auto;
   max-width: 1198px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 86px 28px;
+  }
+
+  .textSection > h4 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .textSection > h4 > span {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .textSection > button {
+    margin: 1rem auto;
+  }
+
+  .container > img {
+    top: 80%;
+    margin: auto;
+    width: 80%;
+    height: 266.24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 86px 28px;
+  }
+
+  .textSection > h4 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .textSection > h4 > span {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .textSection > button {
+    margin: 1rem auto;
+  }
+
+  .container > img {
+    top: 80%;
+    margin: auto;
+    width: 80%;
+    height: 266.24px;
+  }
+}

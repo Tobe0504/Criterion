@@ -77,3 +77,132 @@
   width: 1117px;
   height: 518px;
 }
+
+.container > div:nth-child(2) > button {
+  margin-top: 2rem;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 80px;
+    padding: 226px 32px 171px 32px;
+    flex-direction: column;
+  }
+
+  .container > div:nth-child(1) {
+    flex-basis: 100%;
+  }
+
+  .container > div:nth-child(1) > h4 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    letter-spacing: -0.02em;
+  }
+
+  .container > div:nth-child(1) > button {
+    margin-top: 1rem;
+    min-width: 220px;
+  }
+
+  .container > div:nth-child(2) > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .features > div {
+    flex-basis: 100%;
+  }
+
+  .features > div > h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.97px;
+  }
+
+  .features > div > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .container > div:nth-child(2) > button {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  .container > img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 90%;
+    width: 80%;
+    height: 176px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    gap: 80px;
+    padding: 226px 32px 171px 32px;
+    flex-direction: column;
+  }
+
+  .container > div:nth-child(1) {
+    flex-basis: 100%;
+  }
+
+  .container > div:nth-child(1) > h4 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    letter-spacing: -0.02em;
+  }
+
+  .container > div:nth-child(1) > button {
+    margin-top: 1rem;
+    min-width: 220px;
+  }
+
+  .container > div:nth-child(2) > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .features > div {
+    flex-basis: 100%;
+  }
+
+  .features > div > h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.97px;
+  }
+
+  .features > div > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .container > div:nth-child(2) > button {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  .container > img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 90%;
+    width: 80%;
+    height: 176px;
+    margin: auto;
+  }
+}

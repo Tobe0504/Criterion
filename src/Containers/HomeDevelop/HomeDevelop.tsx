@@ -1,13 +1,25 @@
 import classes from "./HomeDevelop.module.css";
 import homePageDevelop from "../../Assets/Images/homePageDevelop.svg";
 import Button from "../../Components/Button/Button";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomeDevelop = () => {
+  // Effects
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <section className={classes.container}>
-      <p>{"Craft your dream space brick by brick".toUpperCase()}</p>
-      <h2>{"develop a cutting-edge sustainable property".toUpperCase()}</h2>
-      <img src={homePageDevelop} alt="Develop" />
+      <p data-aos="fade-up">
+        {"Craft your dream space brick by brick".toUpperCase()}
+      </p>
+      <h2 data-aos="fade-up">
+        {"develop a cutting-edge sustainable property".toUpperCase()}
+      </h2>
+      <img src={homePageDevelop} alt="Develop" loading="lazy" />
 
       <Button>
         <span>{"GET IN TOUCH"}</span>

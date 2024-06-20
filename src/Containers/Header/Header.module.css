@@ -11,7 +11,6 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 22.97px;
-  color: #191919;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -22,4 +21,72 @@
 
 .container > a:nth-child(2) {
   margin-left: auto;
+}
+
+.darkColor {
+  color: #f4f4f4;
+}
+
+.lightColor {
+  color: #191919;
+}
+
+.active {
+  color: #a49031;
+}
+
+.sidenavOpener {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dc7322;
+  border-radius: 50%;
+  display: none;
+  margin-left: auto;
+}
+
+.sideNav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  overflow: hidden;
+  width: 0;
+  transition: 0.3s;
+  background: #30352f;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    gap: 2rem;
+    padding: 28px 32px;
+  }
+
+  .container > a,
+  .container > button {
+    display: none;
+  }
+
+  .sidenavOpener {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 2rem;
+    padding: 28px 32px;
+  }
+
+  .container > a,
+  .container > button {
+    display: none;
+  }
+
+  .sidenavOpener {
+    display: flex;
+  }
 }

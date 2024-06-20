@@ -33,7 +33,7 @@ const AboutTheTeam = () => {
         {team.map((data, i) => {
           return (
             <div className={classes.member} key={i}>
-              <img src={data.image} alt={data.name} />
+              <img src={data.image} alt={data.name} loading="lazy" />
               <p>{data.name}</p>
               <p>{data.role}</p>
               <p>READ MORE</p>

@@ -1,0 +1,100 @@
+.container {
+  background: var(--Criterion-Black, #191919);
+  padding: 40px 120px;
+}
+
+.container > img {
+  position: relative;
+  top: -150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  height: 801.5px;
+  object-fit: cover;
+  display: block;
+}
+
+.textSection {
+  margin: 100px 0;
+  padding: 66px 0;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 0.5px solid #f4f4f4;
+  border-bottom: 0.5px solid #f4f4f4;
+}
+
+.textSection > p {
+  max-width: 789.93px;
+  font-family: "Space Grotesk";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 39.68px;
+  letter-spacing: -0.02em;
+  color: #f2f2f2;
+}
+
+.whyWork {
+  border-bottom: 0.5px solid #f4f4f4;
+}
+
+.whyWork > h4 {
+  font-family: "Space Grotesk";
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #f2f2f2;
+}
+
+.whyWork > div {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  margin: 4rem 0;
+}
+
+.whyWork > div > div {
+  color: #f2f2f2;
+  width: 212.84px;
+}
+
+.whyWork > div > div > h4 {
+  font-family: "Space Grotesk";
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 66.75px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.whyWork > div > div > p {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.97px;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.imageSection {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.imageSection > img {
+  flex: 1;
+  max-height: 460.98px;
+  object-fit: cover;
+}
+
+.imageSection > img:nth-child(1),
+.imageSection > img:nth-child(3) {
+  flex: 2;
+}
+
+.imageSection > img:nth-child(2) {
+  flex: 1;
+}

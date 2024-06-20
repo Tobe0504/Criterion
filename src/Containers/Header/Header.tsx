@@ -2,9 +2,11 @@ import classes from "./Header.module.css";
 import logo from "../../Assets/Images/logo.svg";
 import logoLight from "../../Assets/Images/logoLight.svg";
 import { routes } from "../../Utilities/routes";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button/Button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
+import HeaderSideNav from "../HeaderSideNav/HeaderSideNav";
 
 type HeaderProps = {
   isDark?: boolean;
@@ -14,18 +16,39 @@ const Header = ({ isDark }: HeaderProps) => {
   // States
   const [navBackground, setNavBackground] = useState("transparent");
 
+  // Router
+  const location = useLocation();
+  const navigate = useNavigate();
+
   // Utils
   const handleScroll = () => {
     const scrollY = window.scrollY || window.pageYOffset;
-    if (scrollY > window.innerHeight) {
+    if (scrollY > 400) {
       setNavBackground(isDark ? "#191919" : "#F4F4F4");
     } else {
       setNavBackground("transparent");
     }
   };
 
-  // Effects
+  // Refs
+  const sideNav = useRef<null | HTMLDivElement>(null);
 
+  // Router
+
+  // Utils
+  const openSideNav = () => {
+    if (sideNav.current) {
+      sideNav.current.style.width = "100%";
+    }
+  };
+
+  const closeSideNav = () => {
+    if (sideNav.current) {
+      sideNav.current.style.width = "0%";
+    }
+  };
+
+  // Effects
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -37,21 +60,29 @@ const Header = ({ isDark }: HeaderProps) => {
       className={classes.container}
       style={{ backgroundColor: navBackground }}
     >
-      <img src={isDark ? logoLight : logo} alt="Criterion" />
+      <img src={isDark ? logoLight : logo} alt="Criterion" loading="lazy" />
 
       {routes.map((data, i) => {
         return (
           <Link
             to={data.route}
             key={i}
-            style={isDark ? { color: "#F4F4F4" } : undefined}
+            onClick={scrollToTheTop}
+            className={`${
+              location.pathname === data.route ? classes.active : undefined
+            } ${isDark ? classes.darkColor : classes.lightColor}`}
           >
             {data.title}
           </Link>
         );
       })}
 
-      <Button subType="gold">
+      <Button
+        subType="gold"
+        onClick={() => {
+          scrollToTheTop();
+        }}
+      >
         <span>{"download profile".toUpperCase()}</span>
         <svg
           width="16"
@@ -66,6 +97,31 @@ const Header = ({ isDark }: HeaderProps) => {
           />
         </svg>
       </Button>
+
+      <div className={classes.sidenavOpener} onClick={openSideNav}>
+        <svg
+          width="17"
+          height="18"
+          viewBox="0 0 17 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.48535 17.0278V0.837402"
+            stroke="#F4F4F4"
+            strokeWidth="1.58476"
+          />
+          <path
+            d="M16.5801 8.93262L0.389648 8.93262"
+            stroke="#F4F4F4"
+            strokeWidth="1.58476"
+          />
+        </svg>
+      </div>
+
+      <div className={classes.sideNav} ref={sideNav}>
+        <HeaderSideNav closeSideNav={closeSideNav} />
+      </div>
     </div>
   );
 };

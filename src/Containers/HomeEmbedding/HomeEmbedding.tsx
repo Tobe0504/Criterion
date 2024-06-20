@@ -6,7 +6,7 @@ const HomeEmbedding = () => {
   return (
     <section className={classes.container}>
       <div className={classes.textSection}>
-        <h4>
+        <h4 data-aos="fade-up">
           EMBEDDING <span>SUSTAINABILITY</span> INTO EVERYDAY LIVING
         </h4>
 
@@ -27,7 +27,12 @@ const HomeEmbedding = () => {
         </Button>
       </div>
 
-      <img src={embedding} alt="Embedding" />
+      <img
+        src={embedding}
+        alt="Embedding"
+        loading="lazy"
+        data-aos="fade-down"
+      />
     </section>
   );
 };

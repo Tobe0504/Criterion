@@ -14,6 +14,7 @@ const Footer = () => {
       <div className={classes.topSection}>
         <p>Stay up to date with our projects and developments</p>
         <div>
+          <input type="text" />
           <Button subType="normal">
             <span>SUBMIT</span>
             <svg
@@ -61,7 +62,7 @@ const Footer = () => {
       </div>
 
       <div className={classes.logoSection}>
-        <img src={logoLarge} alt="Criterion" />
+        <img src={logoLarge} alt="Criterion" loading="lazy" />
       </div>
 
       <div className={classes.copySection}>

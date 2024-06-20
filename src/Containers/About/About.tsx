@@ -1,4 +1,5 @@
 import Layout from "../../Components/Layout/Layout";
+import Transition from "../../Utilities/Transition/Transition";
 import AboutCoreValues from "../AboutCoreValues/AboutCoreValues";
 import AboutTheTeam from "../AboutTheTeam/AboutTheTeam";
 import AboutVision from "../AboutVision/AboutVision";
@@ -15,4 +16,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Transition(About);

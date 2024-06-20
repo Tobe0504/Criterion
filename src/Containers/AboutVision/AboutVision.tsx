@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import classes from "./AboutVision.module.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const AboutVision = () => {
   // Utils
@@ -25,14 +28,23 @@ const AboutVision = () => {
       ],
     },
   ];
+
+  // Effects
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section className={classes.container}>
       {vision.map((data, i) => {
         return (
-          <div className={classes.vision} key={i}>
+          <div className={classes.vision} key={i} data-aos="fade-up">
             <h4>{data.title.toUpperCase()}</h4>
             {data.caption.map((datum, j) => {
-              return <p key={j}>{datum}</p>;
+              return (
+                <p key={j} data-aos="fade-up-left">
+                  {datum}
+                </p>
+              );
             })}
           </div>
         );

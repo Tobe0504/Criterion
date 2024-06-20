@@ -1,0 +1,32 @@
+.container {
+  background: var(--Criterion-Flax, #a49031);
+  padding: 84px 182px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #191919;
+  padding: 58px 0;
+  border-top: 1px solid #191919;
+  border-bottom: 1px solid #191919;
+}
+
+.header > h2 {
+  font-family: "Poppins";
+  font-size: 128px;
+  font-weight: 300;
+  line-height: 113.92px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.header > p {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  max-width: 261.39px;
+}

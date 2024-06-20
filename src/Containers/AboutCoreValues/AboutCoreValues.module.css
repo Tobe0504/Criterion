@@ -34,6 +34,10 @@
   padding: 100px 55px;
 }
 
+.coreValues > div:nth-child(3) {
+  display: none;
+}
+
 .coreValues > div:first-child {
   border-right: 2.21px solid var(--Criterion-White, #f4f4f4);
   text-align: right;
@@ -66,4 +70,152 @@
   font-weight: 300;
   line-height: 24px;
   letter-spacing: -0.01em;
+}
+
+@media screen and (max-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 40px 32px;
+  }
+
+  .header > h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .header > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    margin: 1rem auto;
+    max-width: auto;
+  }
+
+  .coreValues {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .coreValues > div {
+    padding: 20px 0px;
+  }
+
+  .coreValues > div:first-child,
+  .coreValues > div:nth-child(2),
+  .coreValues > div:nth-child(3) {
+    border-right: none;
+    text-align: center;
+  }
+
+  .coreValues > div:first-child,
+  .coreValues > div:nth-child(2) {
+    display: none;
+  }
+
+  .coreValues > div:nth-child(3) {
+    display: block;
+  }
+
+  .coreValues > div > div {
+    margin-bottom: 98px;
+  }
+
+  .coreValues > div > div > h2 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+  }
+
+  .coreValues > div > div > h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.97px;
+  }
+
+  .coreValues > div > div > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 40px 32px;
+  }
+
+  .header > h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 35.2px;
+    letter-spacing: -0.04em;
+  }
+
+  .header > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    margin: 1rem auto;
+    max-width: auto;
+  }
+
+  .coreValues {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .coreValues > div {
+    padding: 20px 0px;
+  }
+
+  .coreValues > div:first-child,
+  .coreValues > div:nth-child(2),
+  .coreValues > div:nth-child(3) {
+    border-right: none;
+    text-align: center;
+  }
+
+  .coreValues > div:first-child,
+  .coreValues > div:nth-child(2) {
+    display: none;
+  }
+
+  .coreValues > div:nth-child(3) {
+    display: block;
+  }
+
+  .coreValues > div > div {
+    margin-bottom: 98px;
+  }
+
+  .coreValues > div > div > h2 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+  }
+
+  .coreValues > div > div > h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.97px;
+  }
+
+  .coreValues > div > div > p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
 }

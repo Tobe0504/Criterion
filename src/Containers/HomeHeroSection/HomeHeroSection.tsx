@@ -2,6 +2,8 @@ import Button from "../../Components/Button/Button";
 import classes from "./HomeHeroSection.module.css";
 import heroImage from "../../Assets/Images/heroImage.svg";
 import { motion } from "framer-motion";
+import { AppContext } from "../../Context/AppContext";
+import { useContext } from "react";
 
 // Variants
 const banner = {
@@ -26,6 +28,8 @@ const letterAnimation = {
   },
 };
 const HomeHeroSection = () => {
+  // COntext
+  const { scrollToRef } = useContext(AppContext);
   return (
     <section className={classes.container}>
       <motion.div
@@ -43,7 +47,7 @@ const HomeHeroSection = () => {
           INSPIRED BY
           <motion.span variants={letterAnimation}>TODAY'S NEEDS</motion.span>
         </h4>
-        <Button>
+        <Button onClick={scrollToRef}>
           <span>GET IN TOUCH</span>
           <svg
             width="16"

@@ -1,11 +1,15 @@
 import Button from "../../Components/Button/Button";
 import classes from "./HomeTranscending.module.css";
 import transcend from "../../Assets/Images/transcend.svg";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { AppContext } from "../../Context/AppContext";
 
 const HomeTranscending = () => {
+  // Context
+  const { scrollToRef } = useContext(AppContext);
+
   // Utils
   const featuresExplained = [
     {
@@ -45,7 +49,7 @@ const HomeTranscending = () => {
           opportunities
         </h4>
 
-        <Button subType="normal">
+        <Button subType="normal" onClick={scrollToRef}>
           <span>{"GET IN TOUCH"}</span>
           <span>
             <svg

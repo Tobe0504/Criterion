@@ -2,7 +2,7 @@ import classes from "./Header.module.css";
 import logo from "../../Assets/Images/logo.svg";
 import logoLight from "../../Assets/Images/logoLight.svg";
 import { routes } from "../../Utilities/routes";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import { useEffect, useRef, useState } from "react";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
@@ -18,7 +18,6 @@ const Header = ({ isDark }: HeaderProps) => {
 
   // Router
   const location = useLocation();
-  const navigate = useNavigate();
 
   // Utils
   const handleScroll = () => {
@@ -51,9 +50,12 @@ const Header = ({ isDark }: HeaderProps) => {
   // Effects
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
+    // eslint-disable-next-line
   }, []);
   return (
     <div

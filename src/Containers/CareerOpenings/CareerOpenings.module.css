@@ -30,3 +30,53 @@
   text-align: left;
   max-width: 261.39px;
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 53px 32px;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 28px 0;
+    gap: 1rem;
+  }
+
+  .header > h2 {
+    font-size: 48px;
+    line-height: 42.24px;
+    letter-spacing: -0.04em;
+  }
+
+  .header > p {
+    font-size: 16px;
+    text-align: center;
+    max-width: auto;
+    line-height: 140%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 53px 32px;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 28px 0;
+    gap: 1rem;
+  }
+
+  .header > h2 {
+    font-size: 48px;
+    line-height: 42.24px;
+    letter-spacing: -0.04em;
+  }
+
+  .header > p {
+    font-size: 16px;
+    text-align: center;
+    max-width: auto;
+    line-height: 140%;
+  }
+}

@@ -38,7 +38,15 @@ const CareerOpenings = () => {
 
       <div>
         {careers.map((data, i) => {
-          return <CaerreDropdown />;
+          return (
+            <CaerreDropdown
+              title={data.title}
+              role={data.duration}
+              content={
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quam deserunt consequuntur beatae pariatur architecto, dolorum voluptatibus eaque laudantium alias reiciendis, laborum fugit temporibus consectetur magni sit ducimus voluptate autem."
+              }
+            />
+          );
         })}
       </div>
     </section>

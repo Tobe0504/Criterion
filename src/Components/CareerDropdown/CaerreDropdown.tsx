@@ -1,7 +1,13 @@
 import { useState } from "react";
 import classes from "./CaerreDropdown.module.css";
 
-const CaerreDropdown = () => {
+type CaerreDropdownProps = {
+  title: string;
+  role: string;
+  content?: string;
+};
+
+const CaerreDropdown = ({ title, role, content }: CaerreDropdownProps) => {
   // States
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -12,8 +18,8 @@ const CaerreDropdown = () => {
           setIsOpen((prevState) => !prevState);
         }}
       >
-        <p>Real Estate Development Manager</p>
-        <p>FullTime</p>
+        <p>{title}</p>
+        <p>{role}</p>
         <svg
           width="22"
           height="22"
@@ -37,14 +43,7 @@ const CaerreDropdown = () => {
         style={isOpen ? { maxHeight: "400px" } : { maxHeight: "0px" }}
         className={classes.body}
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          tempora sed aut iure. Quo facere ex, temporibus iure, reiciendis
-          dolorem rem repudiandae sint, mollitia nihil impedit itaque animi
-          molestias atque obcaecati ad sed tempora quis. Quaerat autem mollitia
-          laboriosam optio sint incidunt quis nihil sunt numquam, quae nostrum
-          esse consectetur.
-        </p>
+        <p>{content}</p>
       </div>
     </div>
   );

@@ -66,6 +66,8 @@ const AboutCoreValues = () => {
                   <p>{data.caption}</p>
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
@@ -80,7 +82,21 @@ const AboutCoreValues = () => {
                   <p>{data.caption}</p>
                 </div>
               );
+            } else {
+              return null;
             }
+          })}
+        </div>
+
+        <div>
+          {coreValues.map((data, i) => {
+            return (
+              <div data-aos="zoom-in-right">
+                <h2>0{i + 1}</h2>
+                <h4>{data.title}</h4>
+                <p>{data.caption}</p>
+              </div>
+            );
           })}
         </div>
       </div>

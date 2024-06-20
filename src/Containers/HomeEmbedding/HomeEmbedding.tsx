@@ -1,8 +1,12 @@
 import Button from "../../Components/Button/Button";
 import classes from "./HomeEmbedding.module.css";
 import embedding from "../../Assets/Images/embedding.svg";
+import { useNavigate } from "react-router-dom";
+import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 
 const HomeEmbedding = () => {
+  // Router
+  const navigate = useNavigate();
   return (
     <section className={classes.container}>
       <div className={classes.textSection}>
@@ -10,7 +14,13 @@ const HomeEmbedding = () => {
           EMBEDDING <span>SUSTAINABILITY</span> INTO EVERYDAY LIVING
         </h4>
 
-        <Button type="secondary">
+        <Button
+          type="secondary"
+          onClick={() => {
+            navigate("/about-us");
+            scrollToTheTop();
+          }}
+        >
           <span>{"Read more about us".toUpperCase()}</span>
           <svg
             width="17"

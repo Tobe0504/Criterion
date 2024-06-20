@@ -1,19 +1,22 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Button from "../../Components/Button/Button";
 import Input from "../../Components/Input/Input";
 import TextArea from "../../Components/TextArea/TextArea";
 import classes from "./HomeSignUp.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { AppContext } from "../../Context/AppContext";
 
 const HomeSignUp = () => {
+  // Context
+  const { contactRef } = useContext(AppContext);
   // Effects
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <section className={classes.container}>
+    <section className={classes.container} ref={contactRef}>
       <div className={classes.textSection} data-aos="zoom-in-right">
         <h2>{"Interested in exploring further?".toUpperCase()}</h2>
         <p>{"Initiate a conversation today".toUpperCase()}</p>

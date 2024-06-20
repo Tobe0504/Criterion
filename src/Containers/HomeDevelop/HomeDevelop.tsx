@@ -1,11 +1,15 @@
 import classes from "./HomeDevelop.module.css";
 import homePageDevelop from "../../Assets/Images/homePageDevelop.svg";
 import Button from "../../Components/Button/Button";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { AppContext } from "../../Context/AppContext";
 
 const HomeDevelop = () => {
+  // Context
+  const { scrollToRef } = useContext(AppContext);
+
   // Effects
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -21,7 +25,7 @@ const HomeDevelop = () => {
       </h2>
       <img src={homePageDevelop} alt="Develop" loading="lazy" />
 
-      <Button>
+      <Button onClick={scrollToRef}>
         <span>{"GET IN TOUCH"}</span>
         <span>
           <svg

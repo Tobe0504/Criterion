@@ -43,7 +43,7 @@ const HomeTranscending = () => {
 
   return (
     <section className={classes.container}>
-      <div data-aos="fade-up-left">
+      <div data-aos="fade-up">
         <h4>
           Transcending the realm of mere service providers. We are architects of
           opportunities
@@ -91,7 +91,7 @@ const HomeTranscending = () => {
         <div className={classes.features}>
           {featuresExplained.map((data, i) => {
             return (
-              <div className={classes.feature} key={i} data-aos="fade-up-right">
+              <div className={classes.feature} key={i} data-aos="fade-up">
                 <h4>{data.header}</h4>
                 <p>{data.caption}</p>
               </div>
@@ -118,12 +118,7 @@ const HomeTranscending = () => {
         </Button>
       </div>
 
-      <img
-        src={transcend}
-        alt="Transcend"
-        loading="lazy"
-        data-aos="fade-up-left"
-      />
+      <img src={transcend} alt="Transcend" loading="lazy" data-aos="fade-up" />
     </section>
   );
 };

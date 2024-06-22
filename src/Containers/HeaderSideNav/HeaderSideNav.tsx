@@ -1,13 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import { routes } from "../../Utilities/routes";
 import classes from "./HeaderSideNav.module.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
+import { AppContext } from "../../Context/AppContext";
+import { useContext } from "react";
 
 type HeaderSideNavProps = {
   closeSideNav: () => void;
 };
 
 const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
+  // Context
+  const { scrollToRef } = useContext(AppContext);
+
+  // Router
+  const location = useLocation();
+
   return (
     <section className={classes.container}>
       <svg
@@ -33,11 +46,19 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
       <div className={classes.routesSection}>
         {routes.map((data, i) => {
           return (
-            <Link to={data.route} key={i}>
+            <Link
+              to={data.route}
+              key={i}
+              onClick={scrollToTheTop}
+              className={`${
+                location.pathname === data.route ? classes.active : undefined
+              }`}
+            >
               {data.title}
             </Link>
           );
         })}
+        <p onClick={scrollToRef}>CONTACT US</p>
 
         <Button>
           <span>{"download profile".toUpperCase()}</span>
@@ -54,6 +75,13 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
             />
           </svg>
         </Button>
+
+        <div className={classes.socialSection}>
+          <InstagramIcon />
+          <FacebookRoundedIcon />
+          <XIcon />
+          <LinkedInIcon />
+        </div>
       </div>
     </section>
   );

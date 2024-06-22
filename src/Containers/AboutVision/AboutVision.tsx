@@ -41,7 +41,7 @@ const AboutVision = () => {
             <h4>{data.title.toUpperCase()}</h4>
             {data.caption.map((datum, j) => {
               return (
-                <p key={j} data-aos="fade-up-left">
+                <p key={j} data-aos="fade-up">
                   {datum}
                 </p>
               );

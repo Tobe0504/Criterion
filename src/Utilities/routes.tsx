@@ -13,11 +13,6 @@ export const routes = [
   {
     title: "CAREERS",
     route: "/careers",
-    relatedRoutes: ["/careers"],
-  },
-  {
-    title: "CONTACT US",
-    route: "/contact-us",
-    relatedRoutes: ["/contact-us"],
+    relatedRoutes: ["/"],
   },
 ];

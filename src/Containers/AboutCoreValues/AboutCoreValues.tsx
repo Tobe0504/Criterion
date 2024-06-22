@@ -46,7 +46,7 @@ const AboutCoreValues = () => {
 
   return (
     <section className={classes.container}>
-      <div className={classes.header} data-aos="zoom-in-up">
+      <div className={classes.header} data-aos="fade-up">
         <h2>{"our core values".toUpperCase()}</h2>
         <p>
           {
@@ -60,7 +60,7 @@ const AboutCoreValues = () => {
           {coreValues.map((data, i) => {
             if (i % 2 === 0) {
               return (
-                <div data-aos="zoom-in-left">
+                <div data-aos="fade-up" key={i}>
                   <h2>0{i + 1}</h2>
                   <h4>{data.title}</h4>
                   <p>{data.caption}</p>
@@ -76,7 +76,7 @@ const AboutCoreValues = () => {
           {coreValues.map((data, i) => {
             if (i % 2 !== 0) {
               return (
-                <div data-aos="zoom-in-right">
+                <div data-aos="fade-up" key={i}>
                   <h2>0{i + 1}</h2>
                   <h4>{data.title}</h4>
                   <p>{data.caption}</p>
@@ -91,7 +91,7 @@ const AboutCoreValues = () => {
         <div>
           {coreValues.map((data, i) => {
             return (
-              <div data-aos="zoom-in-right">
+              <div data-aos="fade-up" key={i}>
                 <h2>0{i + 1}</h2>
                 <h4>{data.title}</h4>
                 <p>{data.caption}</p>

@@ -37,12 +37,7 @@ const HomeEmbedding = () => {
         </Button>
       </div>
 
-      <img
-        src={embedding}
-        alt="Embedding"
-        loading="lazy"
-        data-aos="fade-down"
-      />
+      <img src={embedding} alt="Embedding" loading="lazy" data-aos="fade-up" />
     </section>
   );
 };

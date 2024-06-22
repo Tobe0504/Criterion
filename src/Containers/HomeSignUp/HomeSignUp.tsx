@@ -60,7 +60,7 @@ const HomeSignUp = () => {
         </div>
       </div>
 
-      <form data-aos="zoom-in-left">
+      <form data-aos="fade-up">
         <Input placeholder="FULL NAME" />
         <Input placeholder="PHONE" type="phone" />
         <Input placeholder="EMAIL" type="email" />

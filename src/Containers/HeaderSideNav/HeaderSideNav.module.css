@@ -1,6 +1,12 @@
 .container {
   padding: 19px 2rem;
   height: 100%;
+  position: relative;
+}
+
+.container > svg {
+  position: relative;
+  z-index: 3;
 }
 
 .routesSection {
@@ -9,9 +15,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  white-space: nowrap;
 }
 
-.routesSection > a {
+.routesSection > a,
+.routesSection > p {
   font-family: "Space Grotesk";
   font-size: 18px;
   font-weight: 600;
@@ -20,4 +34,33 @@
   color: #f4f4f4;
   text-decoration: none;
   margin-bottom: 1rem;
+}
+
+.socialSection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  margin-top: 162px;
+}
+
+.socialSection > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.container > a:nth-child(2) {
+  margin-left: auto;
+}
+
+.darkColor {
+  color: #f4f4f4;
+}
+
+.lightColor {
+  color: #191919;
+}
+
+.active {
+  color: #a49031;
 }

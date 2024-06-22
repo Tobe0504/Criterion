@@ -6,16 +6,25 @@
   transition: background-color 0.3s ease;
 }
 
-.container > a {
+.container > img {
+  width: 126px;
+  height: 36.1px;
+  cursor: pointer;
+}
+
+.container > a,
+.container > p {
   font-family: "Space Grotesk";
   font-size: 18px;
   font-weight: 600;
   line-height: 22.97px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.container > a:hover {
+.container > a:hover,
+.container > p:hover {
   color: #a49031;
 }
 
@@ -52,7 +61,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 20;
+  z-index: 30;
   overflow: hidden;
   width: 0;
   transition: 0.3s;
@@ -66,7 +75,8 @@
   }
 
   .container > a,
-  .container > button {
+  .container > button,
+  .container > p {
     display: none;
   }
 
@@ -82,7 +92,8 @@
   }
 
   .container > a,
-  .container > button {
+  .container > button,
+  .container > p {
     display: none;
   }
 

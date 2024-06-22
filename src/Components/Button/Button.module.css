@@ -15,6 +15,10 @@
   border-radius: 1px;
 }
 
+.button:hover {
+  gap: 14px;
+}
+
 .primary:not(.normal),
 .secondary:not(.normal):hover {
   background: #a49031;
@@ -22,8 +26,7 @@
   color: #f4f4f4;
 }
 
-.secondary:not(.normal),
-.primary:not(.normal):hover {
+.secondary:not(.normal) {
   border: 1.5px solid #a49031;
   color: #a49031;
   background: transparent;

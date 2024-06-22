@@ -2,11 +2,12 @@ import classes from "./Header.module.css";
 import logo from "../../Assets/Images/logo.svg";
 import logoLight from "../../Assets/Images/logoLight.svg";
 import { routes } from "../../Utilities/routes";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button/Button";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 import HeaderSideNav from "../HeaderSideNav/HeaderSideNav";
+import { AppContext } from "../../Context/AppContext";
 
 type HeaderProps = {
   isDark?: boolean;
@@ -16,8 +17,12 @@ const Header = ({ isDark }: HeaderProps) => {
   // States
   const [navBackground, setNavBackground] = useState("transparent");
 
+  // Context
+  const { scrollToRef } = useContext(AppContext);
+
   // Router
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Utils
   const handleScroll = () => {
@@ -62,7 +67,14 @@ const Header = ({ isDark }: HeaderProps) => {
       className={classes.container}
       style={{ backgroundColor: navBackground }}
     >
-      <img src={isDark ? logoLight : logo} alt="Criterion" loading="lazy" />
+      <img
+        src={isDark ? logoLight : logo}
+        alt="Criterion"
+        loading="lazy"
+        onClick={() => {
+          navigate("/");
+        }}
+      />
 
       {routes.map((data, i) => {
         return (
@@ -78,6 +90,12 @@ const Header = ({ isDark }: HeaderProps) => {
           </Link>
         );
       })}
+      <p
+        onClick={scrollToRef}
+        className={`${isDark ? classes.darkColor : classes.lightColor}`}
+      >
+        CONTACT US
+      </p>
 
       <Button
         subType="gold"

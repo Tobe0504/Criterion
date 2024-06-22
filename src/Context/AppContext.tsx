@@ -26,11 +26,23 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
         navigate("/");
       }
 
-      contactRef.current.scrollIntoView({
+      (contactRef.current as HTMLDivElement).scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "start",
       });
+    } else {
+      navigate("/");
+
+      setTimeout(() => {
+        if (contactRef.current) {
+          (contactRef.current as HTMLDivElement).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "start",
+          });
+        }
+      }, 2000);
     }
   };
 

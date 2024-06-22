@@ -44,7 +44,7 @@ const CareerAboutCriterion = () => {
 
       <div className={classes.imageSection}>
         {images.map((data, i) => {
-          return <img src={data} alt="Careers" loading="lazy" />;
+          return <img src={data} key={i} alt="Careers" loading="lazy" />;
         })}
       </div>
     </section>

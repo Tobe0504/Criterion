@@ -7,6 +7,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoLarge from "../../Assets/Images/logoLarge.svg";
+import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 
 const Footer = () => {
   return (
@@ -37,7 +38,7 @@ const Footer = () => {
         <div>
           {routes.map((data, i) => {
             return (
-              <Link to={data.route} key={i}>
+              <Link to={data.route} key={i} onClick={scrollToTheTop}>
                 {data.title}
               </Link>
             );

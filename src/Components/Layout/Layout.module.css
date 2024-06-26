@@ -1,6 +1,7 @@
 .container {
   position: relative;
-  background: url("../../Assets/Images/grid.svg");
+  /* background: url("../../Assets/Images/grid.svg"); */
+  background: #f4f4f4;
   background-position: center center;
 }
 

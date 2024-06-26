@@ -1,6 +1,7 @@
 .container {
   padding: 392px 162px 147px 162px;
-  background: url("../../Assets/Images/greenbg.png");
+  /* background: url("../../Assets/Images/greenbg.png"); */
+  background: #30352f;
   background-position: center center;
 }
 

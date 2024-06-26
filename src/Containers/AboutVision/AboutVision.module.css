@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: url("../../Assets/Images/greenbg.png");
+  /* background: url("../../Assets/Images/greenbg.png"); */
+  background: #30352f;
   background-position: center center;
 }
 

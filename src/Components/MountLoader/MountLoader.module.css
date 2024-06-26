@@ -1,5 +1,6 @@
 .container {
-  background: #f4f4f4;
+  background: var(--Criterion-Black, #191919);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,5 +8,5 @@
 }
 
 .container > img {
-  width: 400px;
+  width: 100%;
 }

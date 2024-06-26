@@ -26,7 +26,7 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 6000);
+    }, 6500);
   }, []);
 
   //   Router

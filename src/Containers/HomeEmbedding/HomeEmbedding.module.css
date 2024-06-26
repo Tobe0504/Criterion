@@ -1,8 +1,9 @@
 .container {
-  background: #30352f;
   padding: 154px 291px 320px 291px;
   text-align: center;
   position: relative;
+  background: url("../../Assets/Images/greenbg.png");
+  background-position: center center;
 }
 
 .textSection > h4 {

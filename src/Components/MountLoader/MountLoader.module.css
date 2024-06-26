@@ -1,0 +1,11 @@
+.container {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container > img {
+  width: 400px;
+}

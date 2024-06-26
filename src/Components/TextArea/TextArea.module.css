@@ -57,7 +57,7 @@
   color: red;
 }
 
-.input > input::placeholder {
+.container > textarea::placeholder {
   font-family: Poppins;
   font-size: 16.62px;
   font-weight: 300;

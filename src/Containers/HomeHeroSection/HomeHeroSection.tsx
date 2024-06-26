@@ -5,39 +5,12 @@ import { motion } from "framer-motion";
 import { AppContext } from "../../Context/AppContext";
 import { useContext } from "react";
 
-// Variants
-const banner = {
-  animate: {
-    transition: {
-      delayChildren: 0.4,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const letterAnimation = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1,
-    },
-  },
-};
 const HomeHeroSection = () => {
   // COntext
   const { scrollToRef } = useContext(AppContext);
   return (
     <section className={classes.container}>
-      <motion.div
-        className={classes.textSection}
-        variants={banner}
-        initial="initial"
-        animate="animate"
-      >
+      <motion.div className={classes.textSection}>
         <h4>
           CREATING{" "}
           <motion.span>
@@ -45,7 +18,7 @@ const HomeHeroSection = () => {
             SPACES,{" "}
           </motion.span>
           INSPIRED BY
-          <motion.span variants={letterAnimation}>TODAY'S NEEDS</motion.span>
+          <motion.span>TODAY 'S NEEDS</motion.span>
         </h4>
         <Button onClick={scrollToRef}>
           <span>GET IN TOUCH</span>

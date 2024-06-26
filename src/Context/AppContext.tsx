@@ -1,9 +1,10 @@
-import { createContext, RefObject, useRef } from "react";
+import { createContext, RefObject, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 type AppContextValues = {
   contactRef: RefObject<HTMLDivElement>;
   scrollToRef: () => void;
+  loading: boolean;
 };
 
 type AppContextProviderProps = {
@@ -15,6 +16,18 @@ export const AppContext = createContext({} as AppContextValues);
 const AppContextProvider = ({ children }: AppContextProviderProps) => {
   // Refs
   const contactRef = useRef<HTMLDivElement>(null);
+
+  // State
+  const [loading, setLoading] = useState(true);
+
+  //   Effects
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []);
 
   //   Router
   const location = useLocation();
@@ -47,7 +60,7 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
   };
 
   return (
-    <AppContext.Provider value={{ contactRef, scrollToRef }}>
+    <AppContext.Provider value={{ contactRef, scrollToRef, loading }}>
       {children}
     </AppContext.Provider>
   );

@@ -2,6 +2,7 @@
   padding: 19px 2rem;
   height: 100%;
   position: relative;
+  background: url("../../Assets/Images/greenbgMobile.svg");
 }
 
 .container > svg {

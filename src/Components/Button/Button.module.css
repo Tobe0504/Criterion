@@ -51,6 +51,12 @@
   background-color: #d0caca;
 }
 
+.black {
+  color: #f4f4f4;
+  background: #191919;
+  border: none;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .button {
     font-size: 14px;

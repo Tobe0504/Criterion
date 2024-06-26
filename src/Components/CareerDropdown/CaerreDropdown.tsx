@@ -4,7 +4,7 @@ import classes from "./CaerreDropdown.module.css";
 type CaerreDropdownProps = {
   title: string;
   role: string;
-  content?: string;
+  content?: string | React.ReactNode;
 };
 
 const CaerreDropdown = ({ title, role, content }: CaerreDropdownProps) => {
@@ -40,7 +40,7 @@ const CaerreDropdown = ({ title, role, content }: CaerreDropdownProps) => {
       </div>
 
       <div
-        style={isOpen ? { maxHeight: "400px" } : { maxHeight: "0px" }}
+        style={isOpen ? { maxHeight: "1000px" } : { maxHeight: "0px" }}
         className={classes.body}
       >
         <p>{content}</p>

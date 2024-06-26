@@ -31,6 +31,68 @@
   max-width: 261.39px;
 }
 
+.content {
+  color: var(--Criterion-Black, #191919);
+}
+
+.description {
+  width: 80%;
+}
+
+.description > h4 {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 18.72px;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+
+.description > p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+}
+
+.keyResponsibilitiesAndQualifications {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+.keyResponsibilitiesAndQualifications > div {
+  flex: 50%;
+}
+
+.keyResponsibilitiesAndQualifications > div > h4 {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 18.72px;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+
+.keyResponsibilitiesAndQualifications > div > ul {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  gap: 69px;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     padding: 53px 32px;
@@ -53,6 +115,28 @@
     text-align: center;
     max-width: auto;
     line-height: 140%;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .keyResponsibilitiesAndQualifications {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 2rem;
+  }
+
+  .keyResponsibilitiesAndQualifications > div {
+    flex: 100%;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: 1rem;
   }
 }
 
@@ -78,5 +162,27 @@
     text-align: center;
     max-width: auto;
     line-height: 140%;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .keyResponsibilitiesAndQualifications {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 2rem;
+  }
+
+  .keyResponsibilitiesAndQualifications > div {
+    flex: 100%;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: 1rem;
   }
 }

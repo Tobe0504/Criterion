@@ -3,6 +3,9 @@ import careerAbout from "../../Assets/Images/careerAbout.svg";
 import career1 from "../../Assets/Images/career1.svg";
 import career2 from "../../Assets/Images/career2.svg";
 import career3 from "../../Assets/Images/career3.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const CareerAboutCriterion = () => {
   // Utils
@@ -14,11 +17,16 @@ const CareerAboutCriterion = () => {
 
   const images = [career1, career2, career3];
 
+  // Effects
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section className={classes.container}>
+    <section className={classes.container} data-aos="fade-up">
       <img src={careerAbout} alt="Career" loading="lazy" />
       <div className={classes.textSection}>
-        <p>
+        <p data-aos="fade-up">
           At Criterion Homes, we're redefining the real estate landscape in
           Nigeria, one innovative project at a time. We believe that our
           greatest asset is our people. If you're passionate about real estate,
@@ -29,11 +37,11 @@ const CareerAboutCriterion = () => {
       </div>
 
       <div className={classes.whyWork}>
-        <h4>{"Why work with us?".toUpperCase()}</h4>
+        <h4 data-aos="fade-up">{"Why work with us?".toUpperCase()}</h4>
         <div>
           {whyWork.map((data, i) => {
             return (
-              <div key={i}>
+              <div key={i} data-aos="fade-up">
                 <h4>{i + 1}</h4>
                 <p>{data.toUpperCase()}</p>
               </div>
@@ -42,7 +50,7 @@ const CareerAboutCriterion = () => {
         </div>
       </div>
 
-      <div className={classes.imageSection}>
+      <div className={classes.imageSection} data-aos="fade-up">
         {images.map((data, i) => {
           return <img src={data} key={i} alt="Careers" loading="lazy" />;
         })}

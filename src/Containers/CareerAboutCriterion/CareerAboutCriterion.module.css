@@ -36,6 +36,8 @@
 
 .whyWork {
   border-bottom: 0.5px solid #f4f4f4;
+  display: inline-block;
+  margin-bottom: 92px;
 }
 
 .whyWork > h4 {

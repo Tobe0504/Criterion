@@ -3,11 +3,17 @@ import Button from "../../Components/Button/Button";
 import { routes } from "../../Utilities/routes";
 import classes from "./Footer.module.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoLarge from "../../Assets/Images/logoLarge.svg";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
+import { WhatsApp } from "@mui/icons-material";
+
+export const openExternalLink = (link: string) => {
+  if (link) {
+    window.open(link);
+  }
+};
 
 const Footer = () => {
   return (
@@ -55,10 +61,28 @@ const Footer = () => {
         </div>
 
         <div>
-          <InstagramIcon />
-          <FacebookRoundedIcon />
-          <XIcon />
-          <LinkedInIcon />
+          <InstagramIcon
+            onClick={() => {
+              openExternalLink("https://www.instagram.com/criterionhomes_/");
+            }}
+          />
+          <WhatsApp
+            onClick={() => {
+              openExternalLink("https://wa.me/+2348058573915");
+            }}
+          />
+          <XIcon
+            onClick={() => {
+              openExternalLink("https://x.com/CriterionHomes_");
+            }}
+          />
+          <LinkedInIcon
+            onClick={() => {
+              openExternalLink(
+                "https://www.linkedin.com/company/criterion-homes-ltd/"
+              );
+            }}
+          />
         </div>
       </div>
 

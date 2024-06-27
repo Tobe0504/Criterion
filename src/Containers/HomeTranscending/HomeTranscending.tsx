@@ -86,7 +86,7 @@ const HomeTranscending = () => {
         </Button>
       </div>
       <div>
-        <p>Our unwavering commitment extends to:</p>
+        <p data-aos="fade-up">Our unwavering commitment extends to:</p>
 
         <div className={classes.features}>
           {featuresExplained.map((data, i) => {

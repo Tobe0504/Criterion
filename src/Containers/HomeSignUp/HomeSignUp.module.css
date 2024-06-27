@@ -28,14 +28,20 @@
   text-align: left;
 }
 
-.textSection > div {
+.textSection > div,
+.socials {
   margin-top: 100px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.textSection > div > div {
+.socials {
+  display: none;
+}
+
+.textSection > div > div,
+.socials > div {
   width: 32px;
   height: 32px;
   display: flex;
@@ -82,12 +88,25 @@
   }
 
   .textSection > div {
+    display: none;
+  }
+
+  .textSection > div,
+  .socials {
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .textSection > div > div {
+  .socials {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .textSection > div > div,
+  .socials > div {
     width: 32px;
     height: 32px;
     display: flex;
@@ -97,7 +116,8 @@
     border-radius: 50%;
   }
 
-  .textSection > div > p {
+  .textSection > div > p,
+  .socials > p {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
@@ -144,13 +164,19 @@
     text-align: center;
   }
 
-  .textSection > div {
+  .textSection > div,
+  .socials {
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .textSection > div > div {
+  .socials {
+    display: block;
+  }
+
+  .textSection > div > div,
+  .socials > div {
     width: 32px;
     height: 32px;
     display: flex;

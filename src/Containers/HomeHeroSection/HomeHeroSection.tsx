@@ -4,6 +4,7 @@ import heroImage from "../../Assets/Images/heroImage.svg";
 import { motion } from "framer-motion";
 import { AppContext } from "../../Context/AppContext";
 import { useContext } from "react";
+import heroMobile from "../../Assets/Images/heroMobile.svg";
 
 const HomeHeroSection = () => {
   // COntext
@@ -37,7 +38,18 @@ const HomeHeroSection = () => {
         </Button>
       </motion.div>
 
-      <img src={heroImage} alt="Hero" loading="lazy" />
+      <img
+        src={heroImage}
+        alt="Hero"
+        loading="lazy"
+        className={classes.desktopImage}
+      />
+      <img
+        src={heroMobile}
+        alt="Hero"
+        loading="lazy"
+        className={classes.mobileImage}
+      />
     </section>
   );
 };

@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   padding: 125px 116px;
-  /* position: relative; */
   min-height: calc(900px - 125px);
 }
 
@@ -60,6 +59,14 @@
   object-fit: cover;
 }
 
+.desktopImage {
+  display: block;
+}
+
+.mobileImage {
+  display: none;
+}
+
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container {
     padding: 53px 32px;
@@ -70,6 +77,8 @@
 
   .textSection {
     flex-basis: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   .textSection > h4:not(.textSection > h4 > span:nth-child(1)) {
@@ -95,10 +104,24 @@
   }
 
   .container > img {
-    height: auto;
-    width: 100%;
-    z-index: -1;
-    right: -100px;
+    height: calc(100%);
+    z-index: 0;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  .container > img:nth-child(2) {
+    display: none;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
   }
 }
 
@@ -139,9 +162,23 @@
   }
 
   .container > img {
-    height: 100%;
-    width: 100%;
+    height: calc(100%);
     z-index: 0;
-    right: -100px;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  .container > img:nth-child(2) {
+    display: none;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
   }
 }

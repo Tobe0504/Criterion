@@ -1,6 +1,14 @@
 import Button from "../../Components/Button/Button";
-import { coreValues } from "../AboutCoreValues/AboutCoreValues";
 import classes from "./CareerHero.module.css";
+
+const coreValues2 = [
+  "Trust",
+  "Growth",
+  "Empathy",
+  "Responsibility",
+  "Discipline",
+  "Community",
+];
 
 const CareerHero = () => {
   return (
@@ -37,8 +45,8 @@ const CareerHero = () => {
       <div>
         <p>{"values WE LIVE BY:".toUpperCase()}</p>
         <div>
-          {coreValues.map((data, i) => {
-            return <span key={i}>{data.title}</span>;
+          {coreValues2.map((data, i) => {
+            return <span key={i}>{data}</span>;
           })}
         </div>
       </div>

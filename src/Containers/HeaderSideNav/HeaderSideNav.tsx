@@ -3,12 +3,13 @@ import Button from "../../Components/Button/Button";
 import { routes } from "../../Utilities/routes";
 import classes from "./HeaderSideNav.module.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 import { AppContext } from "../../Context/AppContext";
 import { useContext } from "react";
+import { openExternalLink } from "../Footer/Footer";
+import { WhatsApp } from "@mui/icons-material";
 
 type HeaderSideNavProps = {
   closeSideNav: () => void;
@@ -77,10 +78,28 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
         </Button>
 
         <div className={classes.socialSection}>
-          <InstagramIcon />
-          <FacebookRoundedIcon />
-          <XIcon />
-          <LinkedInIcon />
+          <InstagramIcon
+            onClick={() => {
+              openExternalLink("https://www.instagram.com/criterionhomes_/");
+            }}
+          />
+          <WhatsApp
+            onClick={() => {
+              openExternalLink("https://wa.me/+2348058573915");
+            }}
+          />
+          <XIcon
+            onClick={() => {
+              openExternalLink("https://x.com/CriterionHomes_");
+            }}
+          />
+          <LinkedInIcon
+            onClick={() => {
+              openExternalLink(
+                "https://www.linkedin.com/company/criterion-homes-ltd/"
+              );
+            }}
+          />
         </div>
       </div>
     </section>

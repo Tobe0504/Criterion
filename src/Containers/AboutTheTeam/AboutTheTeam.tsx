@@ -37,7 +37,7 @@ const AboutTheTeam = () => {
       hash: "L?H2=]xux^Ri_4t7ogV@tQRiRibI",
     },
     {
-      name: "Babatope akola",
+      name: "Arasi Olayinka",
       role: "Director",
       image: babatunde,
       information: [

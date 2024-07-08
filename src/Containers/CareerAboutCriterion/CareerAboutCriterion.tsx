@@ -5,7 +5,8 @@ import career2 from "../../Assets/Images/career2.svg";
 import career3 from "../../Assets/Images/career3.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import Image from "../../Components/Image/Image";
 
 const CareerAboutCriterion = () => {
   // Utils
@@ -15,7 +16,11 @@ const CareerAboutCriterion = () => {
     "Exciting and impactful projects",
   ];
 
-  const images = [career1, career2, career3];
+  const images = [
+    { src: career1, hash: "LWHe8,D*nNtR~qR5IURjX.$%n$nh" },
+    { src: career2, hash: "LCE{X;-;00M|00M{_4IU5[xu=?%M" },
+    { src: career3, hash: "L4F5,GK,0K00OF.9~qMx00^+%2~q" },
+  ];
 
   // Effects
   useEffect(() => {
@@ -24,7 +29,15 @@ const CareerAboutCriterion = () => {
 
   return (
     <section className={classes.container} data-aos="fade-up">
-      <img src={careerAbout} alt="Career" loading="lazy" />
+      <Image
+        src={careerAbout}
+        alt="Career"
+        loading="lazy"
+        hash="LZK_B-Rk?wV@00WB9Yj@9Ft7I.t7"
+        width={700}
+        height={700}
+        className={classes.headerImage}
+      />
       <div className={classes.textSection}>
         <p data-aos="fade-up">
           At Criterion Homes, we're redefining the real estate landscape in
@@ -52,7 +65,18 @@ const CareerAboutCriterion = () => {
 
       <div className={classes.imageSection} data-aos="fade-up">
         {images.map((data, i) => {
-          return <img src={data} key={i} alt="Careers" loading="lazy" />;
+          return (
+            <React.Fragment key={i}>
+              <Image
+                src={data.src}
+                alt="Careers"
+                loading="lazy"
+                hash={data.hash}
+                height={460}
+                width={460}
+              />
+            </React.Fragment>
+          );
         })}
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useContext, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { AppContext } from "../../Context/AppContext";
+import Image from "../../Components/Image/Image";
 
 const HomeDevelop = () => {
   // Context
@@ -23,7 +24,12 @@ const HomeDevelop = () => {
       <h2 data-aos="fade-up">
         {"develop a cutting-edge sustainable property".toUpperCase()}
       </h2>
-      <img src={homePageDevelop} alt="Develop" loading="lazy" />
+      <Image
+        src={homePageDevelop}
+        alt="Develop"
+        loading="lazy"
+        hash="LnI#rzj]IUay~qWBjZofyEofnhoe"
+      />
 
       <Button onClick={scrollToRef}>
         <span>{"GET IN TOUCH"}</span>

@@ -5,6 +5,7 @@ import { useContext, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { AppContext } from "../../Context/AppContext";
+import Image from "../../Components/Image/Image";
 
 const HomeTranscending = () => {
   // Context
@@ -103,7 +104,13 @@ const HomeTranscending = () => {
         </Button>
       </div>
 
-      <img src={transcend} alt="Transcend" loading="lazy" data-aos="fade-up" />
+      <Image
+        src={transcend}
+        alt="Transcend"
+        loading="lazy"
+        data-aos="fade-up"
+        hash="L8Dv[z%#4TM{:OVsJ9ae8JI;xDxu"
+      />
     </section>
   );
 };

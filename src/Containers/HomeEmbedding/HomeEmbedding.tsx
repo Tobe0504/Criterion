@@ -1,8 +1,9 @@
 import Button from "../../Components/Button/Button";
 import classes from "./HomeEmbedding.module.css";
-import embedding from "../../Assets/Images/embedding.svg";
+import embedding from "../../Assets/Images/embedding.jpg";
 import { useNavigate } from "react-router-dom";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
+import Image from "../../Components/Image/Image";
 
 const HomeEmbedding = () => {
   // Router
@@ -34,7 +35,15 @@ const HomeEmbedding = () => {
         </Button>
       </div>
 
-      <img src={embedding} alt="Embedding" loading="lazy" data-aos="fade-up" />
+      <Image
+        src={embedding}
+        alt="Embedding"
+        loading="lazy"
+        data-aos="fade-up"
+        hash="L3ECqFpJ00H=^+xVEMI.Di-;VsM|"
+        height={300}
+        adaptToParentDimensions
+      />
     </section>
   );
 };

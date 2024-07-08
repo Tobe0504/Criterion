@@ -3,16 +3,25 @@
   padding: 40px 120px;
 }
 
-.container > img {
+.container > div:nth-child(1) {
   position: relative;
-  top: -150px;
+  top: -170px;
   left: 0;
   right: 0;
   margin: auto;
   width: 1200px;
   height: 801.5px;
-  object-fit: cover;
   display: block;
+}
+
+.container > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container > div:nth-child(1) > div {
+  width: 100% !important;
 }
 
 .textSection {
@@ -86,18 +95,25 @@
   gap: 2rem;
 }
 
-.imageSection > img {
+.imageSection > div,
+.imageSection > canvas {
   flex: 1;
   max-height: 460.98px;
   object-fit: cover;
 }
 
-.imageSection > img:nth-child(1),
-.imageSection > img:nth-child(3) {
+.imageSection > div:nth-child(1),
+.imageSection > div:nth-child(3) {
   flex: 2;
 }
 
-.imageSection > img:nth-child(2) {
+.imageSection > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageSection > div:nth-child(2) {
   flex: 1;
 }
 

@@ -98,7 +98,8 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/src/Assets/Fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf");
+  /* src: url("/src/Assets/Fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf"); */
+  src: url("/src/Assets/Fonts/Poppins/Poppins-Light.ttf");
   font-style: italic;
   font-weight: 300;
 }

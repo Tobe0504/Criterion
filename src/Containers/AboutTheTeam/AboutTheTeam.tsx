@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Image from "../../Components/Image/Image";
 
 const AboutTheTeam = () => {
   // Refs
@@ -24,6 +25,7 @@ const AboutTheTeam = () => {
         "In 2022, Hakeem returned to Propertymart's Lagos headquarters to lead a pivotal turnaround project. He empowered middle management and spearheaded sales and marketing efforts. He delivered four major projects totaling approximately 200 units within a two-year period. Additionally, he played a key role in formulating strategy, managing resources (human, financial, and material), business development, overseeing projects, and forging strategic partnerships. Data-driven analyses informed his decision-making.",
         "Hakeem holds a Bachelor of Arts (Education) from the University of Lagos and has further bolstered his expertise through professional development opportunities and certificates from both Lagos and Harvard Business Schools.",
       ],
+      hash: "LfD]#lM_tljF_NRjo#WAX9jZRPbI",
     },
     {
       name: "Letam Wiwa, MA, LLB, BL",
@@ -32,6 +34,7 @@ const AboutTheTeam = () => {
       information: [
         "With an illustrious career spanning nearly three decades in property law and real estate development, Letam Wiwa has continually raised the bar for industry standards and best practices. He has developed high-profile properties in Lagos, Port Harcourt, and Abuja, including the prestigious Katampe Heights Apartments (KHA) 1 and KHA 2, along with other luxury residences. As the Managing Partner at Bogana Chambers and based in Abuja, Letam Wiwa's profound legal expertise and development acumen ensure exceptional value and reliable outcomes for all stakeholders involved.",
       ],
+      hash: "L?H2=]xux^Ri_4t7ogV@tQRiRibI",
     },
     {
       name: "Babatope akola",
@@ -40,6 +43,7 @@ const AboutTheTeam = () => {
       information: [
         "Demonstrating a remarkable 16-year tenure in real estate and construction, Babatope Akola excels in leading teams and managing projects from inception to completion. With a proven track record of delivering projects on time and within budget, Babatope is proficient in budgeting, risk management, and stakeholder engagement. Renowned for exceptional communication skills and a passion for leveraging innovation and technology to solve complex problems, Babatope is a detail-oriented professional with a track record of developing unique, results-driven initiatives. Both creative and visionary, Babatope has thrived in creating solutions in environments that present constant challenges and diversity.",
       ],
+      hash: "LULXS#xu.TV?~Vj[?aog?wWA4nWB",
     },
   ];
 
@@ -89,7 +93,14 @@ const AboutTheTeam = () => {
           {team.map((data, i) => {
             return (
               <div className={classes.member} key={i} data-aos="fade-up">
-                <img src={data.image} alt={data.name} loading="lazy" />
+                <Image
+                  src={data.image}
+                  alt={data.name}
+                  loading="lazy"
+                  hash={data.hash}
+                  width={248}
+                  height={410}
+                />
                 <p>{data.name}</p>
                 <p>{data.role}</p>
                 <p

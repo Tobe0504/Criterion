@@ -31,13 +31,26 @@
   margin: 1.5rem auto;
 }
 
-.container > img {
+.container > div > img {
   position: absolute;
   top: 80%;
   left: 0;
   right: 0;
   margin: auto;
   max-width: 1198px;
+  min-width: 1000px;
+  height: 316px;
+}
+
+.container > div > div {
+  width: 1198px !important;
+  height: 300px !important;
+  position: absolute !important;
+  top: 80% !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+  display: block !important;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -63,11 +76,12 @@
     margin: 1rem auto;
   }
 
-  .container > img {
-    top: 80%;
-    margin: auto;
-    width: 80%;
-    height: 266.24px;
+  .container > img,
+  .container > div > div {
+    top: 80% !important;
+    margin: auto !important;
+    width: 80% !important;
+    height: 266.24px !important;
   }
 }
 
@@ -94,10 +108,11 @@
     margin: 1rem auto;
   }
 
-  .container > img {
-    top: 80%;
-    margin: auto;
-    width: 80%;
-    height: 266.24px;
+  .container > img,
+  .container > div > div {
+    top: 80% !important;
+    margin: auto !important;
+    width: 80% !important;
+    height: 266.24px !important;
   }
 }

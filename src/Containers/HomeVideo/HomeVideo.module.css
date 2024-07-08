@@ -4,20 +4,37 @@
   justify-content: center;
 }
 
-.container > img {
+.container img {
   width: 100%;
   object-fit: cover;
   height: 100%;
+  flex: 1;
+}
+
+.container > div > div {
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 801px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container {
     height: 631px;
   }
+
+  .container > div > div {
+    height: 631px !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .container {
     height: 631px;
+  }
+
+  .container > div > div {
+    height: 631px !important;
   }
 }

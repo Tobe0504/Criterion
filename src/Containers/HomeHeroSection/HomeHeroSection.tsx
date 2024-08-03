@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { AppContext } from "../../Context/AppContext";
 import { useContext } from "react";
 import heroMobile from "../../Assets/Images/heroMobile.svg";
+import Image from "../../Components/Image/Image";
 
 const HomeHeroSection = () => {
   // COntext
@@ -35,17 +36,19 @@ const HomeHeroSection = () => {
         </Button>
       </motion.div>
 
-      <img
+      <Image
         src={heroImage}
-        alt="Hero"
+        alt="Develop"
         loading="lazy"
+        hash="LIH2fyO[0$pI_NIoS3RjM|xaV@%M"
         className={classes.desktopImage}
       />
-      <img
+      <Image
         src={heroMobile}
         alt="Hero"
         loading="lazy"
         className={classes.mobileImage}
+        hash="L9HoOL9v3F5pyZs9Els7pw%LMJ$N"
       />
     </section>
   );

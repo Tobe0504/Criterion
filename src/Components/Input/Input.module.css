@@ -60,19 +60,21 @@
   padding: 20px 19px;
   border: 1px solid #191919;
   color: #191919;
+  background: transparent;
 }
 
 .input input:focus {
-  outline: 1px solid #a49031;
-  border: 1px solid #a49031;
+  outline: none;
+  background: transparent;
 }
 
 .invalid {
   border: 1px solid red;
   color: red;
+  background: transparent;
 }
 
-.input > input::placeholder {
+.input > .light::placeholder {
   font-family: Poppins;
   font-size: 16.62px;
   font-weight: 300;
@@ -80,6 +82,10 @@
   letter-spacing: -0.01em;
   text-align: left;
   color: #191919;
+}
+
+.dark::placeholder {
+  color: #f4f4f4;
 }
 
 .errorMessage {

@@ -18,6 +18,7 @@ type InputProps = {
   name?: string;
   condition?: boolean;
   readOnly?: boolean;
+  color?: string;
 };
 
 const Input = ({
@@ -35,6 +36,7 @@ const Input = ({
   name,
   condition,
   readOnly,
+  color,
 }: InputProps) => {
   // States
   const [invalid, setInvalid] = useState(false);
@@ -78,7 +80,10 @@ const Input = ({
             if (onBlur) onBlur();
           }}
           value={value}
-          className={invalid ? classes.invalid : classes.valid}
+          className={`${invalid ? classes.invalid : classes.valid} ${
+            color ? classes.dark : classes.light
+          }`}
+          style={{ border: `1px solid ${color}`, color }}
         />
         {type === "password" && (
           <span>

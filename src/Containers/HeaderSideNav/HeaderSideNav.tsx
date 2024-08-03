@@ -9,7 +9,7 @@ import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 import { AppContext } from "../../Context/AppContext";
 import { useContext } from "react";
 import { openExternalLink } from "../Footer/Footer";
-import { WhatsApp } from "@mui/icons-material";
+import { Facebook } from "@mui/icons-material";
 
 type HeaderSideNavProps = {
   closeSideNav: () => void;
@@ -80,9 +80,11 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
               openExternalLink("https://www.instagram.com/criterionhomes_/");
             }}
           />
-          <WhatsApp
+          <Facebook
             onClick={() => {
-              openExternalLink("https://wa.me/+2348058573915");
+              openExternalLink(
+                "https://www.facebook.com/share/cMp5ZRTE8eYBNGH4/?mibextid=LQQJ4d"
+              );
             }}
           />
           <XIcon

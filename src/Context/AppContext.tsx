@@ -5,6 +5,8 @@ type AppContextValues = {
   contactRef: RefObject<HTMLDivElement>;
   scrollToRef: () => void;
   loading: boolean;
+  openingsRef: RefObject<HTMLDivElement>;
+  scrollToOpenings: () => void;
 };
 
 type AppContextProviderProps = {
@@ -16,6 +18,7 @@ export const AppContext = createContext({} as AppContextValues);
 const AppContextProvider = ({ children }: AppContextProviderProps) => {
   // Refs
   const contactRef = useRef<HTMLDivElement>(null);
+  const openingsRef = useRef<HTMLDivElement>(null);
 
   // State
   const [loading, setLoading] = useState(true);
@@ -59,8 +62,26 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
     }
   };
 
+  const scrollToOpenings = () => {
+    if (openingsRef.current) {
+      (openingsRef.current as HTMLDivElement).scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "start",
+      });
+    }
+  };
+
   return (
-    <AppContext.Provider value={{ contactRef, scrollToRef, loading }}>
+    <AppContext.Provider
+      value={{
+        contactRef,
+        scrollToRef,
+        loading,
+        openingsRef,
+        scrollToOpenings,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CaerreDropdown from "../../Components/CareerDropdown/CaerreDropdown";
 import classes from "./CareerOpenings.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Button from "../../Components/Button/Button";
+import CareerOpeningForm from "../CareerOpeningForm/CareerOpeningForm";
 
 const CareerOpenings = () => {
+  // States
+  const [displayCareerOpeningForm, setDisplayCareerOpeningForm] =
+    useState(false);
+
   const careers = [
     {
       title: "HR/Admin",
@@ -53,7 +58,12 @@ const CareerOpenings = () => {
               Join us in shaping the future of sustainable living at Criterion
               Homes.
             </p>
-            <Button type="black">
+            <Button
+              type="black"
+              onClick={() => {
+                setDisplayCareerOpeningForm(true);
+              }}
+            >
               <span>Apply here</span>
               <svg
                 width="17"
@@ -122,7 +132,12 @@ const CareerOpenings = () => {
               Join us in shaping the future of sustainable living at Criterion
               Homes.
             </p>
-            <Button type="black">
+            <Button
+              type="black"
+              onClick={() => {
+                setDisplayCareerOpeningForm(true);
+              }}
+            >
               <span>Apply here</span>
               <svg
                 width="17"
@@ -189,7 +204,12 @@ const CareerOpenings = () => {
               Join us in shaping the future of sustainable living at Criterion
               Homes.
             </p>
-            <Button type="black">
+            <Button
+              type="black"
+              onClick={() => {
+                setDisplayCareerOpeningForm(true);
+              }}
+            >
               <span>Apply here</span>
               <svg
                 width="17"
@@ -214,27 +234,39 @@ const CareerOpenings = () => {
 
   return (
     <section className={classes.container}>
-      <div className={classes.header} data-aos="fade-up">
-        <h2>{"openings".toUpperCase()}</h2>
-        <p>
-          Ready to join us? Apply below to be a part of of our extraordinary
-          team.
-        </p>
-      </div>
+      {!displayCareerOpeningForm ? (
+        <>
+          <div className={classes.header} data-aos="fade-up">
+            <h2>{"openings".toUpperCase()}</h2>
+            <p>
+              Ready to join us? Apply below to be a part of of our extraordinary
+              team.
+            </p>
+          </div>
 
-      <div>
-        {careers.map((data, i) => {
-          return (
-            <div key={i} data-aos="fade-up">
-              <CaerreDropdown
-                title={data.title}
-                role={data.duration}
-                content={data.content}
-              />
-            </div>
-          );
-        })}
-      </div>
+          <div>
+            {careers.map((data, i) => {
+              return (
+                <div key={i} data-aos="fade-up">
+                  <CaerreDropdown
+                    title={data.title}
+                    role={data.duration}
+                    content={data.content}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <div data-aos="fade-up">
+          <CareerOpeningForm
+            onClick={() => {
+              setDisplayCareerOpeningForm(false);
+            }}
+          />
+        </div>
+      )}
     </section>
   );
 };

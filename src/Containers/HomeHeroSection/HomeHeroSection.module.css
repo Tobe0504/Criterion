@@ -49,7 +49,8 @@
   min-width: 220px;
 }
 
-.container > img {
+.container > img,
+.container > div > img {
   position: absolute;
   right: 0;
   top: 0px;
@@ -161,13 +162,24 @@
     letter-spacing: -0.04em;
   }
 
-  .container > img {
+  .container > img,
+  .container > div > img {
     height: calc(100%);
     z-index: 0;
     right: 0px;
     top: 0px;
     z-index: 0;
     object-fit: cover;
+  }
+
+  .container > div > div {
+    width: 1198px !important;
+    height: calc(100%) !important;
+    z-index: 0 !important;
+    right: 0px !important;
+    top: 0px !important;
+    z-index: 0 !important;
+    object-fit: cover !important;
   }
 
   .container > img:nth-child(2) {

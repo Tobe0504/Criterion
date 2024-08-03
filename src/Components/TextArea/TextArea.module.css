@@ -45,16 +45,18 @@
   color: #191919;
   resize: none;
   min-height: 150px;
+  background: transparent;
 }
 
 .container > textarea:focus {
-  outline: 1px solid #a49031;
-  border: 1px solid #a49031;
+  outline: none;
+  background: transparent;
 }
 
 .invalid {
   border: 1px solid red;
   color: red;
+  background: transparent;
 }
 
 .container > textarea::placeholder {

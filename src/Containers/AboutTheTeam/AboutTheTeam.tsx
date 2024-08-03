@@ -41,7 +41,9 @@ const AboutTheTeam = () => {
       role: "Director",
       image: babatunde,
       information: [
-        "Demonstrating a remarkable 16-year tenure in real estate and construction, Babatope Akola excels in leading teams and managing projects from inception to completion. With a proven track record of delivering projects on time and within budget, Babatope is proficient in budgeting, risk management, and stakeholder engagement. Renowned for exceptional communication skills and a passion for leveraging innovation and technology to solve complex problems, Babatope is a detail-oriented professional with a track record of developing unique, results-driven initiatives. Both creative and visionary, Babatope has thrived in creating solutions in environments that present constant challenges and diversity.",
+        "Olayinka Arasi is a distinguished legal expert with over 16 years of experience in providing high-level legal, compliance, and regulatory advisory services. His expertise encompasses dispute resolution, risk management, business and commercial law, corporate affairs, land transactions, contracts, and employment law.",
+        "Yinka has notably represented the Minister of the Federal Capital Territory in intricate land disputes and offers comprehensive advisory services to clients in the real estate and construction sectors. He was instrumental in the legal team for Nigeria’s first airport and road concessionaire under a Public-Private Partnership (PPP) and led legal due diligence for over 60 health start-ups in the Investing in Innovation program (i3), funded by the Bill and Melinda Gates Foundation.",
+        "He has previously served as Deputy Head of Chambers at a prominent commercial law firm and as acting Head of Legal for a Free Trade Zone company. Yinka is a member of the Nigerian Bar Association, the Chartered Institute of Arbitrators (UK), and the International Compliance Association (UK).",
       ],
       hash: "LULXS#xu.TV?~Vj[?aog?wWA4nWB",
     },

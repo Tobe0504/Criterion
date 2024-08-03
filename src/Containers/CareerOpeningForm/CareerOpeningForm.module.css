@@ -1,0 +1,82 @@
+.container {
+  background: var(--Criterion-Black, #191919);
+  padding: 173px 272px;
+}
+
+.uploads {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.uploads > div {
+  flex: 1;
+}
+
+.uploads > div > label {
+  background: #f4f4f4;
+  width: 100%;
+  display: block;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.86px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  padding: 14px 39px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uploads > div > input {
+  display: none;
+}
+
+.buttonSection > button {
+  margin: 1rem auto;
+  padding: 11px 75px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 88px 17px;
+  }
+
+  .uploads {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .uploads > div {
+    flex: 1;
+  }
+
+  .uploads > div > label {
+    font-size: 12px;
+    line-height: 15.31px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 88px 17px;
+  }
+
+  .uploads {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .uploads > div {
+    flex: 1;
+  }
+
+  .uploads > div > label {
+    font-size: 12px;
+    line-height: 15.31px;
+    text-align: left;
+  }
+}

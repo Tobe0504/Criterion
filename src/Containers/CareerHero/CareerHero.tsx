@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import Button from "../../Components/Button/Button";
+import { AppContext } from "../../Context/AppContext";
 import classes from "./CareerHero.module.css";
 
 const coreValues2 = [
@@ -11,6 +13,9 @@ const coreValues2 = [
 ];
 
 const CareerHero = () => {
+  // Context
+  const { scrollToOpenings } = useContext(AppContext);
+
   return (
     <section className={classes.container}>
       <div>
@@ -25,7 +30,7 @@ const CareerHero = () => {
           Join our team of people who are passionate about real estate, driven
           by excellence, and eager to make a difference.
         </p>
-        <Button>
+        <Button onClick={scrollToOpenings}>
           <span>{"join our team".toUpperCase()}</span>
           <svg
             width="17"

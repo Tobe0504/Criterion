@@ -72,8 +72,7 @@ const CareerAboutCriterion = () => {
                 alt="Careers"
                 loading="lazy"
                 hash={data.hash}
-                height={460}
-                width={460}
+                adaptToParentDimensions
               />
             </React.Fragment>
           );

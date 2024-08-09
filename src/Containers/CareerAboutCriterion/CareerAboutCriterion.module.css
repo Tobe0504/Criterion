@@ -122,14 +122,18 @@
     padding: 40px 32px;
   }
 
-  .container > img {
-    position: relative;
-    top: -80px;
+  .container > div:nth-child(1) {
     left: 0;
     right: 0;
-
+    margin: auto;
+    top: -80px;
     width: 350px;
     height: 266.24px;
+  }
+
+  .container > div > img {
+    width: 100%;
+    height: 100%;
   }
 
   .textSection {
@@ -179,6 +183,19 @@
     flex-direction: column;
     gap: 2rem;
   }
+
+  .imageSection > div {
+    box-sizing: border-box;
+    width: 346.66px;
+    height: 336.24px;
+    max-height: 336.24px;
+  }
+
+  .imageSection > div > img {
+    width: 346.66px;
+    height: 336.24px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -186,7 +203,7 @@
     padding: 40px 32px;
   }
 
-  .container > img {
+  .container > div > img {
     position: relative;
     top: -80px;
     left: 0;

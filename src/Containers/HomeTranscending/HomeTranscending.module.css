@@ -71,10 +71,7 @@
   color: #191919;
 }
 
-.container > img {
-  position: absolute;
-  right: 0;
-  top: 70%;
+.container > div > img {
   width: 1117px;
   height: 518px;
 }
@@ -149,11 +146,11 @@
     display: block;
   }
 
-  .container > img {
+  .container > div > img {
     position: absolute;
     right: 0;
     left: 0;
-    top: 90%;
+    top: 0%;
     width: 80%;
     height: 176px;
     margin: auto;

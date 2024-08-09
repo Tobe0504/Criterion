@@ -114,7 +114,7 @@
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container {
-    padding: 66px 83px;
+    padding: 66px 28px;
   }
 
   .container > h2 {
@@ -138,7 +138,7 @@
     gap: 0.5rem;
   }
 
-  .container > div > div > img {
+  .container > div > div > div > img {
     width: 100%;
     height: 473.8px;
     object-fit: cover;
@@ -164,6 +164,10 @@
   .details > img {
     width: 100%;
     height: 100%;
+  }
+
+  .details > div > div > p {
+    margin-top: 1.5rem;
   }
 }
 
@@ -193,7 +197,7 @@
     gap: 0.5rem;
   }
 
-  .container > div > div > img {
+  .container > div > div > div > img {
     width: 100%;
     height: 473.8px;
     object-fit: cover;

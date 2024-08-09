@@ -75,13 +75,29 @@
   .textSection > button {
     margin: 1rem auto;
   }
-
-  .container > img,
-  .container > div > div {
-    top: 80% !important;
-    margin: auto !important;
-    width: 80% !important;
+  .container > div:last-child {
     height: 266.24px !important;
+    width: 80% !important;
+    top: 80% !important;
+    position: absolute;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  .container > div > img,
+  .container > div > div {
+    margin: auto !important;
+    width: 20% !important;
+    height: 100% !important;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover !important;
+    top: 0% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
   }
 }
 
@@ -108,11 +124,28 @@
     margin: 1rem auto;
   }
 
-  .container > img,
-  .container > div > div {
-    top: 80% !important;
-    margin: auto !important;
-    width: 80% !important;
+  .container > div:last-child {
     height: 266.24px !important;
+    width: 80% !important;
+    top: 80% !important;
+    position: absolute;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  .container > div > img,
+  .container > div > div {
+    margin: auto !important;
+    width: 20% !important;
+    height: 100% !important;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover !important;
+    top: 0% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
   }
 }

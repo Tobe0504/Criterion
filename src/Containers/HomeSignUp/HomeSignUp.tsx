@@ -144,7 +144,7 @@ const HomeSignUp = () => {
               width="16"
               height="17"
               viewBox="0 0 16 17"
-              fill="none"
+              fill="#fff"
               xmlns="http://www.w3.org/2000/svg"
               onClick={() => {
                 openExternalLink("https://wa.me/+2348058573915");
@@ -159,7 +159,7 @@ const HomeSignUp = () => {
               width="12"
               height="12"
               viewBox="0 0 12 12"
-              fill="none"
+              fill="#fff"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path

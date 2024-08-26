@@ -100,10 +100,12 @@ const Header = ({ isDark }: HeaderProps) => {
       <Button
         subType="gold"
         onClick={() => {
-          scrollToTheTop();
+          window.open(
+            "https://drive.google.com/file/d/1KtJxkCViVfCnSWYAcuvd82-CGjaNISaC/view?pli=1"
+          );
         }}
       >
-        <span>{"download profile".toUpperCase()}</span>
+        <span>{"view profile".toUpperCase()}</span>
         <svg
           width="16"
           height="14"

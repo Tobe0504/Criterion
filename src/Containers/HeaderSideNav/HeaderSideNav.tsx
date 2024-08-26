@@ -61,8 +61,14 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
         })}
         <p onClick={scrollToRef}>CONTACT US</p>
 
-        <Button>
-          <span>{"download profile".toUpperCase()}</span>
+        <Button
+          onClick={() => {
+            window.open(
+              "https://drive.google.com/file/d/1KtJxkCViVfCnSWYAcuvd82-CGjaNISaC/view?pli=1"
+            );
+          }}
+        >
+          <span>{"view profile".toUpperCase()}</span>
           <svg
             width="16"
             height="15"

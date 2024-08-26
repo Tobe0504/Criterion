@@ -73,7 +73,12 @@ const Footer = () => {
               </Link>
             );
           })}
-          <Link to={"#0"}>{"download profile".toUpperCase()}</Link>
+          <Link
+            to="https://drive.google.com/file/d/1KtJxkCViVfCnSWYAcuvd82-CGjaNISaC/view?pli=1"
+            target="_blank"
+          >
+            {"view profile".toUpperCase()}
+          </Link>
         </div>
 
         <div>

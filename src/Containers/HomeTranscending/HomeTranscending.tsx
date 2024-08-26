@@ -62,19 +62,6 @@ const HomeTranscending = () => {
             <path d="M8.86307 0.119736L7.58108 1.3906L12.4858 6.11081H0V7.89492H12.4798L7.58108 12.6093L8.86307 13.8803L16 7.00011L8.86307 0.119736Z" />
           </svg>
         </Button>
-
-        {/* <Button subType="normal" type="secondary">
-          <span>{"DOWNLOAD PROFILE"}</span>
-          <svg
-            width="16"
-            height="14"
-            viewBox="0 0 16 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M8.86307 0.119736L7.58108 1.3906L12.4858 6.11081H0V7.89492H12.4798L7.58108 12.6093L8.86307 13.8803L16 7.00011L8.86307 0.119736Z" />
-          </svg>
-        </Button> */}
       </div>
       <div>
         <p data-aos="fade-up">Our unwavering commitment extends to:</p>
@@ -91,7 +78,15 @@ const HomeTranscending = () => {
         </div>
 
         <Button subType="normal" type="secondary">
-          <span>{"DOWNLOAD PROFILE"}</span>
+          <span
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1KtJxkCViVfCnSWYAcuvd82-CGjaNISaC/view?pli=1"
+              );
+            }}
+          >
+            {"VIEW PROFILE"}
+          </span>
           <svg
             width="16"
             height="14"

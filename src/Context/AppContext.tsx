@@ -1,5 +1,15 @@
-import { createContext, RefObject, useEffect, useRef, useState } from "react";
+import {
+  createContext,
+  Dispatch,
+  RefObject,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { requestHandler, requestType } from "../HelperFunctions/requestHandler";
+import { signUpTypes } from "../Utilities/types";
 
 type AppContextValues = {
   contactRef: RefObject<HTMLDivElement>;
@@ -7,11 +17,27 @@ type AppContextValues = {
   loading: boolean;
   openingsRef: RefObject<HTMLDivElement>;
   scrollToOpenings: () => void;
+  notifications: notificationsType;
+  setNotifications: Dispatch<SetStateAction<notificationsType>>;
+  signUp: (data: signUpTypes) => void;
+  requestState: requestType;
+  emailSignUp: (email: string) => void;
+  submitApplication: (data: FormData) => void;
 };
 
 type AppContextProviderProps = {
   children: React.ReactNode;
 };
+
+export type notificationsType =
+  | {
+      title: string;
+      severity: "success" | "error" | "mid";
+      description?: string;
+      id: string | number;
+    }[]
+  | null
+  | undefined;
 
 export const AppContext = createContext({} as AppContextValues);
 
@@ -22,6 +48,12 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
 
   // State
   const [loading, setLoading] = useState(true);
+  const [notifications, setNotifications] = useState<notificationsType>(null);
+  const [requestState, setRequestState] = useState<requestType>({
+    isLoading: false,
+    data: null,
+    error: null,
+  });
 
   //   Effects
   useEffect(() => {
@@ -72,6 +104,49 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
     }
   };
 
+  const signUp = (data: signUpTypes) => {
+    requestHandler({
+      method: "POST",
+      url: `${process.env.REACT_APP_BACKEND_URL}/contact_us/`,
+      data,
+      state: requestState,
+      setState: setRequestState,
+      setNotifications: setNotifications,
+      requestCleanup: true,
+      setNotificationsFailure: true,
+      setNotificationsSuccess: true,
+    });
+  };
+
+  const emailSignUp = (email: string) => {
+    requestHandler({
+      method: "POST",
+      url: `${process.env.REACT_APP_BACKEND_URL}/submit_email/`,
+      data: { email_address: email },
+      state: requestState,
+      setState: setRequestState,
+      setNotifications: setNotifications,
+      requestCleanup: true,
+      setNotificationsFailure: true,
+      setNotificationsSuccess: true,
+    });
+  };
+
+  const submitApplication = (data: FormData) => {
+    requestHandler({
+      method: "POST",
+      url: `${process.env.REACT_APP_BACKEND_URL}/application/`,
+      isMultipart: true,
+      data,
+      state: requestState,
+      setState: setRequestState,
+      setNotifications: setNotifications,
+      requestCleanup: true,
+      setNotificationsFailure: true,
+      setNotificationsSuccess: true,
+    });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -80,6 +155,12 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
         loading,
         openingsRef,
         scrollToOpenings,
+        notifications,
+        setNotifications,
+        signUp,
+        requestState,
+        emailSignUp,
+        submitApplication,
       }}
     >
       {children}

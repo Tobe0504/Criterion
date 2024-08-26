@@ -8,6 +8,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoLarge from "../../Assets/Images/logoLarge.svg";
 import { scrollToTheTop } from "../../HelperFunctions/scrollToTop";
 import { Facebook } from "@mui/icons-material";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 
 export const openExternalLink = (link: string) => {
   if (link) {
@@ -16,13 +18,38 @@ export const openExternalLink = (link: string) => {
 };
 
 const Footer = () => {
+  // Context
+  const { emailSignUp, requestState } = useContext(AppContext);
+
+  // State
+  const [emailAddress, setEmailAddress] = useState("");
+
+  // Effects
+  useEffect(() => {
+    if (requestState?.data) {
+      setEmailAddress("");
+    }
+  }, [requestState?.data]);
+
   return (
     <div className={classes.container}>
       <div className={classes.topSection}>
         <p>Stay up to date with our projects and developments</p>
         <div>
-          <input type="text" />
-          <Button subType="normal">
+          <input
+            type="text"
+            name="email"
+            onChange={(e) => {
+              setEmailAddress(e.target.value);
+            }}
+            value={emailAddress}
+          />
+          <Button
+            subType="normal"
+            disabled={!emailAddress}
+            loading={requestState.isLoading}
+            onClick={() => emailSignUp(emailAddress)}
+          >
             <span>SUBMIT</span>
             <svg
               width="16"

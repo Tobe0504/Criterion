@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../../Components/Button/Button";
 import Input from "../../Components/Input/Input";
 import TextArea from "../../Components/TextArea/TextArea";
@@ -7,14 +7,37 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { AppContext } from "../../Context/AppContext";
 import { openExternalLink } from "../Footer/Footer";
+import { inputChangeHandler } from "../../HelperFunctions/inputChangeHandler";
+import { signUpTypes } from "../../Utilities/types";
 
 const HomeSignUp = () => {
   // Context
-  const { contactRef } = useContext(AppContext);
+  const { contactRef, signUp, requestState } = useContext(AppContext);
+
+  // States
+  const [signUpDetails, setSignUpDetails] = useState<signUpTypes>({
+    fullname: "",
+    phone_number: "",
+    email_address: "",
+    message: "",
+  });
+
   // Effects
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  // Effects
+  useEffect(() => {
+    if (requestState?.data) {
+      setSignUpDetails({
+        fullname: "",
+        phone_number: "",
+        email_address: "",
+        message: "",
+      });
+    }
+  }, [requestState?.data]);
 
   return (
     <section className={classes.container} ref={contactRef}>
@@ -63,13 +86,47 @@ const HomeSignUp = () => {
       </div>
 
       <form data-aos="fade-up">
-        <Input placeholder="FULL NAME" />
-        <Input placeholder="PHONE" type="phone" />
-        <Input placeholder="EMAIL" type="email" />
-        <TextArea placeholder="MESSAGE" />
+        <Input
+          placeholder="FULL NAME"
+          name="fullname"
+          value={signUpDetails.fullname}
+          onChange={(e) => inputChangeHandler(e, setSignUpDetails)}
+        />
+        <Input
+          placeholder="PHONE"
+          type="phone"
+          name="phone_number"
+          value={signUpDetails.phone_number}
+          onChange={(e) => inputChangeHandler(e, setSignUpDetails)}
+        />
+        <Input
+          placeholder="EMAIL"
+          type="email"
+          name="email_address"
+          value={signUpDetails.email_address}
+          onChange={(e) => inputChangeHandler(e, setSignUpDetails)}
+        />
+        <TextArea
+          placeholder="MESSAGE"
+          name="message"
+          value={signUpDetails.message}
+          onChange={(e) => inputChangeHandler(e, setSignUpDetails)}
+        />
 
-        <Button subType="normal">
-          <span>{"STart conversation".toUpperCase()}</span>
+        <Button
+          subType="normal"
+          disabled={
+            !signUpDetails.email_address ||
+            !signUpDetails.fullname ||
+            !signUpDetails.message ||
+            !signUpDetails.phone_number
+          }
+          onClick={() => {
+            signUp(signUpDetails);
+          }}
+          loading={requestState.isLoading}
+        >
+          <span>{"Start conversation".toUpperCase()}</span>
           <svg
             width="17"
             height="14"

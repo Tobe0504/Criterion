@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../Components/Button/Button";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import Input from "../../Components/Input/Input";
+import { AppContext } from "../../Context/AppContext";
 import { inputChangeHandler } from "../../HelperFunctions/inputChangeHandler";
+import { carrerOpeningFormType } from "../../Utilities/types";
 import classes from "./CareerOpeningForm.module.css";
 
 type CareerOpeningFormType = {
@@ -13,14 +15,18 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
   // States
   const [position, setPosition] = useState("");
 
+  // Context
+  const { submitApplication, requestState } = useContext(AppContext);
+
   // Utils
-  const [formDetails, setFormDetails] = useState({
+  const [formDetails, setFormDetails] = useState<carrerOpeningFormType>({
     full_name: "",
     position: "",
-    email: "",
+    email_address: "",
     cover_letter: null,
-    resume: "",
+    resume: null,
   });
+  const [formData, setFormData] = useState(new FormData());
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -42,7 +48,41 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
         return { ...prevState, position };
       });
     }
+
+    // eslint-disable-next-line
   }, [position]);
+
+  useEffect(() => {
+    const formDetailsFormData = new FormData();
+
+    formDetailsFormData.append("full_name", formDetails.full_name);
+    formDetailsFormData.append("position", formDetails.position);
+    formDetailsFormData.append("email_address", formDetails.email_address);
+    formDetailsFormData.append(
+      "cover_letter",
+      formDetails.cover_letter as File
+    );
+    formDetailsFormData.append("resume", formDetails.resume as File);
+
+    setFormData(formDetailsFormData);
+
+    // eslint-disable-next-line
+  }, [formDetails]);
+
+  useEffect(() => {
+    if (requestState?.data) {
+      onClick();
+      setFormDetails({
+        full_name: "",
+        position: "",
+        email_address: "",
+        cover_letter: null,
+        resume: null,
+      });
+    }
+
+    // eslint-disable-next-line
+  }, [requestState?.data]);
 
   return (
     <section className={classes.container}>
@@ -66,8 +106,8 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
         type="email"
         style={{ color: "#F4F4F4" }}
         color="#f4f4f4"
-        name="email"
-        value={formDetails.email}
+        name="email_address"
+        value={formDetails.email_address}
         onChange={(e) => inputChangeHandler(e, setFormDetails)}
       />
       <div className={classes.uploads}>
@@ -82,6 +122,7 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
             id="uploadCoverLeffer"
             name="cover_letter"
             onChange={handleInputChange}
+            accept=".doc,.pdf,.docx"
           />
         </div>
         <div>
@@ -98,7 +139,19 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
       </div>
 
       <div className={classes.buttonSection}>
-        <Button onClick={onClick}>
+        <Button
+          onClick={() => {
+            submitApplication(formData);
+          }}
+          disabled={
+            !formDetails.email_address ||
+            !formDetails?.cover_letter ||
+            !formDetails.full_name ||
+            !formDetails?.position ||
+            !formDetails?.resume
+          }
+          loading={requestState.isLoading}
+        >
           <span>{"SUBMIT"}</span>
           <svg
             width="17"

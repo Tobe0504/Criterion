@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 Space Grotesk Variable Font
 ===========================
 
 This download contains Space Grotesk as both a variable font and static fonts.
 
 Space Grotesk is a variable font with this axis:
-=======
-Poppins Variable Font
-===========================
-
-This download contains Poppins as both a variable font and static fonts.
-
-Poppins is a variable font with this axis:
->>>>>>> 891aaf3 (chore: clone w/ updates)
   wght
 
 This means all the styles are contained in a single file:
@@ -20,11 +11,7 @@ This means all the styles are contained in a single file:
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-<<<<<<< HEAD
 in those cases you can use the static font files for Space Grotesk:
-=======
-in those cases you can use the static font files for Poppins:
->>>>>>> 891aaf3 (chore: clone w/ updates)
   static/SpaceGrotesk-Light.ttf
   static/SpaceGrotesk-Regular.ttf
   static/SpaceGrotesk-Medium.ttf

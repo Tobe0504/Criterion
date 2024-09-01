@@ -1,210 +1,210 @@
 .container {
-  display: flex;
-  align-items: center;
-  margin: 180px 0;
-  padding: 80px 217px;
-  background: #f4f4f4;
+	display: flex;
+	align-items: center;
+	margin: 180px 0;
+	padding: 80px 217px;
+	background: #f4f4f4;
 }
 
 .textSection,
 .container > form {
-  flex-basis: 50%;
+	flex-basis: 50%;
 }
 
 .textSection > h2 {
-  font-family: "Space Grotesk";
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 64px;
-  letter-spacing: -0.02em;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 64px;
+	letter-spacing: -0.02em;
+	text-align: left;
 }
 
 .textSection > p {
-  font-family: "Space Grotesk";
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22.97px;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22.97px;
+	text-align: left;
 }
 
 .textSection > div,
 .socials {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .socials {
-  display: none;
+	display: none;
 }
 
 .textSection > div > div,
 .textSection > div > a,
 .socials > div,
 .socials > a {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #191919;
-  border-radius: 50%;
-  cursor: pointer;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #191919;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 .textSection > div > p {
-  font-family: "Poppins";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: -0.03em;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: -0.03em;
+	text-align: left;
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    margin: 100px 0;
-    padding: 70px 32px;
-    flex-direction: column;
-  }
+	.container {
+		margin: 100px 0;
+		padding: 70px 32px;
+		flex-direction: column;
+	}
 
-  .textSection,
-  .container > form {
-    flex-basis: 100%;
-  }
+	.textSection,
+	.container > form {
+		flex-basis: 100%;
+	}
 
-  .textSection > h2 {
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 44px;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
+	.textSection > h2 {
+		font-size: 48px;
+		font-weight: 300;
+		line-height: 44px;
+		letter-spacing: -0.02em;
+		text-align: center;
+	}
 
-  .textSection > p {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22.97px;
-    text-align: center;
-  }
+	.textSection > p {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 22.97px;
+		text-align: center;
+	}
 
-  .textSection > div {
-    display: none;
-  }
+	.textSection > div {
+		display: none;
+	}
 
-  .textSection > div,
-  .socials {
-    margin-top: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.textSection > div,
+	.socials {
+		margin-top: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .socials {
-    display: flex;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.socials {
+		display: flex;
+		margin-top: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .textSection > div > div,
-  .socials > div {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #191919;
-    border-radius: 50%;
-  }
+	.textSection > div > div,
+	.socials > div {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #191919;
+		border-radius: 50%;
+	}
 
-  .textSection > div > p,
-  .socials > p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-top: 1rem;
-    flex: 100%;
-  }
+	.textSection > div > p,
+	.socials > p {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: -0.02em;
+		text-align: center;
+		margin-top: 1rem;
+		flex: 100%;
+	}
 
-  .container > form {
-    margin-top: 30px;
-    width: 100%;
-  }
+	.container > form {
+		margin-top: 30px;
+		width: 100%;
+	}
 
-  .container > form > button {
-    margin: auto;
-  }
+	.container > form > button {
+		margin: auto;
+	}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    margin: 100px 0;
-    padding: 70px 32px;
-    flex-direction: column;
-  }
+	.container {
+		margin: 100px 0;
+		padding: 70px 32px;
+		flex-direction: column;
+	}
 
-  .textSection,
-  .container > form {
-    flex-basis: 100%;
-  }
+	.textSection,
+	.container > form {
+		flex-basis: 100%;
+	}
 
-  .textSection > h2 {
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 44px;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
+	.textSection > h2 {
+		font-size: 48px;
+		font-weight: 300;
+		line-height: 44px;
+		letter-spacing: -0.02em;
+		text-align: center;
+	}
 
-  .textSection > p {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22.97px;
-    text-align: center;
-  }
+	.textSection > p {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 22.97px;
+		text-align: center;
+	}
 
-  .textSection > div,
-  .socials {
-    margin-top: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.textSection > div,
+	.socials {
+		margin-top: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .socials {
-    display: block;
-  }
+	.socials {
+		display: block;
+	}
 
-  .textSection > div > div,
-  .socials > div {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #191919;
-  }
+	.textSection > div > div,
+	.socials > div {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: #191919;
+	}
 
-  .textSection > div > p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-top: 1rem;
-    flex: 100%;
-  }
+	.textSection > div > p {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: -0.02em;
+		text-align: center;
+		margin-top: 1rem;
+		flex: 100%;
+	}
 
-  .container > form {
-    margin-top: 30px;
-    width: 100%;
-  }
+	.container > form {
+		margin-top: 30px;
+		width: 100%;
+	}
 
-  .container > form > button {
-    margin: auto;
-  }
+	.container > form > button {
+		margin: auto;
+	}
 }

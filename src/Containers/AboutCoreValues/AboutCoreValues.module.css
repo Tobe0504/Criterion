@@ -1,224 +1,224 @@
 .container {
-  padding: 162px 356px;
-  background: var(--Criterion-Black, #191919);
-  color: #f4f4f4;
+	padding: 162px 356px;
+	background: var(--Criterion-Black, #191919);
+	color: #f4f4f4;
 }
 
 .header > h2 {
-  font-family: "Mazuis Display";
-  font-size: 96px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 88px;
-  letter-spacing: -0.04em;
-  text-align: center;
+	font-family: 'Mazuis Display';
+	font-size: 96px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 88px;
+	letter-spacing: -0.04em;
+	text-align: center;
 }
 
 .header > p {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  margin: 1rem auto;
-  max-width: 630.51px;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: -0.01em;
+	text-align: center;
+	margin: 1rem auto;
+	max-width: 630.51px;
 }
 
 .coreValues {
-  display: flex;
-  margin-top: 40px;
+	display: flex;
+	margin-top: 40px;
 }
 
 .coreValues > div {
-  padding: 100px 55px;
+	padding: 100px 55px;
 }
 
 .coreValues > div:nth-child(3) {
-  display: none;
+	display: none;
 }
 
 .coreValues > div:first-child {
-  border-right: 2.21px solid var(--Criterion-White, #f4f4f4);
-  text-align: right;
+	border-right: 2.21px solid var(--Criterion-White, #f4f4f4);
+	text-align: right;
 }
 
 .coreValues > div > div {
-  margin-bottom: 98px;
-  height: 256.51px;
+	margin-bottom: 98px;
+	height: 256.51px;
 }
 
 .coreValues > div > div > h2 {
-  font-family: "Space Grotesk";
-  font-size: 75px;
-  font-weight: 400;
-  line-height: 66.75px;
-  letter-spacing: -0.04em;
-  margin-bottom: 45px;
+	font-family: 'Poppins';
+	font-size: 75px;
+	font-weight: 400;
+	line-height: 66.75px;
+	letter-spacing: -0.04em;
+	margin-bottom: 45px;
 }
 
 .coreValues > div > div > h4 {
-  font-family: "Space Grotesk";
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 26.7px;
-  margin-bottom: 13px;
+	font-family: 'Poppins';
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 26.7px;
+	margin-bottom: 13px;
 }
 
 .coreValues > div > div > p {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: -0.01em;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: -0.01em;
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    padding: 98px 32px;
-  }
+	.container {
+		padding: 98px 32px;
+	}
 
-  .header > h2 {
-    font-size: 40px;
-    line-height: 88px;
-    letter-spacing: -0.04em;
-    text-align: left;
-    font-family: "Mazius Display";
-  }
+	.header > h2 {
+		font-size: 40px;
+		line-height: 88px;
+		letter-spacing: -0.04em;
+		text-align: left;
+		font-family: 'Mazius Display';
+	}
 
-  .header > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: left;
-    margin: 0rem auto;
-    max-width: auto;
-  }
+	.header > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: left;
+		margin: 0rem auto;
+		max-width: auto;
+	}
 
-  .coreValues {
-    display: flex;
-    margin-top: 40px;
-    flex-direction: column;
-  }
+	.coreValues {
+		display: flex;
+		margin-top: 40px;
+		flex-direction: column;
+	}
 
-  .coreValues > div {
-    padding: 20px 0px;
-  }
+	.coreValues > div {
+		padding: 20px 0px;
+	}
 
-  .coreValues > div:first-child,
-  .coreValues > div:nth-child(2),
-  .coreValues > div:nth-child(3) {
-    border-right: none;
-    text-align: left;
-  }
+	.coreValues > div:first-child,
+	.coreValues > div:nth-child(2),
+	.coreValues > div:nth-child(3) {
+		border-right: none;
+		text-align: left;
+	}
 
-  .coreValues > div:first-child,
-  .coreValues > div:nth-child(2) {
-    display: none;
-  }
+	.coreValues > div:first-child,
+	.coreValues > div:nth-child(2) {
+		display: none;
+	}
 
-  .coreValues > div:nth-child(3) {
-    display: block;
-  }
+	.coreValues > div:nth-child(3) {
+		display: block;
+	}
 
-  .coreValues > div > div {
-    margin-bottom: 98px;
-  }
+	.coreValues > div > div {
+		margin-bottom: 98px;
+	}
 
-  .coreValues > div > div > h2 {
-    font-size: 75px;
-    font-weight: 400;
-    line-height: 66.75px;
-    letter-spacing: -0.04em;
-    margin-bottom: 32px;
-  }
+	.coreValues > div > div > h2 {
+		font-size: 75px;
+		font-weight: 400;
+		line-height: 66.75px;
+		letter-spacing: -0.04em;
+		margin-bottom: 32px;
+	}
 
-  .coreValues > div > div > h4 {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 26.7px;
-    text-align: left;
-  }
+	.coreValues > div > div > h4 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 26.7px;
+		text-align: left;
+	}
 
-  .coreValues > div > div > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: left;
-  }
+	.coreValues > div > div > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: left;
+	}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    padding: 98px 32px;
-  }
+	.container {
+		padding: 98px 32px;
+	}
 
-  .header > h2 {
-    font-size: 40px;
-    line-height: 88px;
-    letter-spacing: -0.04em;
-    text-align: left;
-    font-family: "Mazius Display";
-  }
+	.header > h2 {
+		font-size: 40px;
+		line-height: 88px;
+		letter-spacing: -0.04em;
+		text-align: left;
+		font-family: 'Mazius Display';
+	}
 
-  .header > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: left;
-    margin: 0rem auto;
-    max-width: auto;
-  }
+	.header > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: left;
+		margin: 0rem auto;
+		max-width: auto;
+	}
 
-  .coreValues {
-    display: flex;
-    margin-top: 40px;
-    flex-direction: column;
-  }
+	.coreValues {
+		display: flex;
+		margin-top: 40px;
+		flex-direction: column;
+	}
 
-  .coreValues > div {
-    padding: 20px 0px;
-  }
+	.coreValues > div {
+		padding: 20px 0px;
+	}
 
-  .coreValues > div:first-child,
-  .coreValues > div:nth-child(2),
-  .coreValues > div:nth-child(3) {
-    border-right: none;
-    text-align: left;
-  }
+	.coreValues > div:first-child,
+	.coreValues > div:nth-child(2),
+	.coreValues > div:nth-child(3) {
+		border-right: none;
+		text-align: left;
+	}
 
-  .coreValues > div:first-child,
-  .coreValues > div:nth-child(2) {
-    display: none;
-  }
+	.coreValues > div:first-child,
+	.coreValues > div:nth-child(2) {
+		display: none;
+	}
 
-  .coreValues > div:nth-child(3) {
-    display: block;
-  }
+	.coreValues > div:nth-child(3) {
+		display: block;
+	}
 
-  .coreValues > div > div {
-    margin-bottom: 98px;
-  }
+	.coreValues > div > div {
+		margin-bottom: 98px;
+	}
 
-  .coreValues > div > div > h2 {
-    font-size: 75px;
-    font-weight: 400;
-    line-height: 66.75px;
-    letter-spacing: -0.04em;
-    margin-bottom: 32px;
-  }
+	.coreValues > div > div > h2 {
+		font-size: 75px;
+		font-weight: 400;
+		line-height: 66.75px;
+		letter-spacing: -0.04em;
+		margin-bottom: 32px;
+	}
 
-  .coreValues > div > div > h4 {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 26.7px;
-    text-align: left;
-  }
+	.coreValues > div > div > h4 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 26.7px;
+		text-align: left;
+	}
 
-  .coreValues > div > div > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: left;
-  }
+	.coreValues > div > div > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: left;
+	}
 }

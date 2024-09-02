@@ -1,188 +1,188 @@
 .container {
-  background: var(--Criterion-Flax, #a49031);
-  padding: 84px 182px;
+	background: var(--Criterion-Flax, #a49031);
+	padding: 84px 182px;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #191919;
-  padding: 58px 0;
-  border-top: 1px solid #191919;
-  border-bottom: 1px solid #191919;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #191919;
+	padding: 58px 0;
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #191919;
 }
 
 .header > h2 {
-  font-family: "Poppins";
-  font-size: 128px;
-  font-weight: 300;
-  line-height: 113.92px;
-  letter-spacing: -0.04em;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 128px;
+	font-weight: 300;
+	line-height: 113.92px;
+	letter-spacing: -0.04em;
+	text-align: left;
 }
 
 .header > p {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
-  max-width: 261.39px;
+	font-family: 'Poppins';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+	text-align: left;
+	max-width: 261.39px;
 }
 
 .content {
-  color: var(--Criterion-Black, #191919);
+	color: var(--Criterion-Black, #191919);
 }
 
 .description {
-  width: 80%;
+	width: 80%;
 }
 
 .description > h4 {
-  font-family: "Space Grotesk";
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 18.72px;
-  text-align: left;
-  margin-bottom: 0.7rem;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 18.72px;
+	text-align: left;
+	margin-bottom: 0.7rem;
 }
 
 .description > p {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: left;
 }
 
 .keyResponsibilitiesAndQualifications {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin-top: 3rem;
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+	margin-top: 3rem;
 }
 
 .keyResponsibilitiesAndQualifications > div {
-  flex: 50%;
+	flex: 50%;
 }
 
 .keyResponsibilitiesAndQualifications > div > h4 {
-  font-family: "Space Grotesk";
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 18.72px;
-  text-align: left;
-  margin-bottom: 0.7rem;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 18.72px;
+	text-align: left;
+	margin-bottom: 0.7rem;
 }
 
 .keyResponsibilitiesAndQualifications > div > ul {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: left;
 }
 
 .footer {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  gap: 69px;
-  margin-top: 3rem;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	width: 80%;
+	gap: 69px;
+	margin-top: 3rem;
+	justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    padding: 53px 32px;
-  }
+	.container {
+		padding: 53px 32px;
+	}
 
-  .header {
-    flex-direction: column;
-    padding: 28px 0;
-    gap: 1rem;
-  }
+	.header {
+		flex-direction: column;
+		padding: 28px 0;
+		gap: 1rem;
+	}
 
-  .header > h2 {
-    font-size: 48px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.header > h2 {
+		font-size: 48px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .header > p {
-    font-size: 16px;
-    text-align: center;
-    max-width: auto;
-    line-height: 140%;
-  }
+	.header > p {
+		font-size: 16px;
+		text-align: center;
+		max-width: auto;
+		line-height: 140%;
+	}
 
-  .description {
-    width: 100%;
-  }
+	.description {
+		width: 100%;
+	}
 
-  .keyResponsibilitiesAndQualifications {
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 2rem;
-  }
+	.keyResponsibilitiesAndQualifications {
+		flex-direction: column;
+		gap: 16px;
+		margin-top: 2rem;
+	}
 
-  .keyResponsibilitiesAndQualifications > div {
-    flex: 100%;
-  }
+	.keyResponsibilitiesAndQualifications > div {
+		flex: 100%;
+	}
 
-  .footer {
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    gap: 16px;
-    margin-top: 1rem;
-  }
+	.footer {
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+		gap: 16px;
+		margin-top: 1rem;
+	}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    padding: 53px 32px;
-  }
+	.container {
+		padding: 53px 32px;
+	}
 
-  .header {
-    flex-direction: column;
-    padding: 28px 0;
-    gap: 1rem;
-  }
+	.header {
+		flex-direction: column;
+		padding: 28px 0;
+		gap: 1rem;
+	}
 
-  .header > h2 {
-    font-size: 48px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.header > h2 {
+		font-size: 48px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .header > p {
-    font-size: 16px;
-    text-align: center;
-    max-width: auto;
-    line-height: 140%;
-  }
+	.header > p {
+		font-size: 16px;
+		text-align: center;
+		max-width: auto;
+		line-height: 140%;
+	}
 
-  .description {
-    width: 100%;
-  }
+	.description {
+		width: 100%;
+	}
 
-  .keyResponsibilitiesAndQualifications {
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 2rem;
-  }
+	.keyResponsibilitiesAndQualifications {
+		flex-direction: column;
+		gap: 16px;
+		margin-top: 2rem;
+	}
 
-  .keyResponsibilitiesAndQualifications > div {
-    flex: 100%;
-  }
+	.keyResponsibilitiesAndQualifications > div {
+		flex: 100%;
+	}
 
-  .footer {
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    gap: 16px;
-    margin-top: 1rem;
-  }
+	.footer {
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+		gap: 16px;
+		margin-top: 1rem;
+	}
 }

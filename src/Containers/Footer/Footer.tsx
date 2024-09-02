@@ -92,7 +92,7 @@ const Footer = () => {
         <div>
           <InstagramIcon
             onClick={() => {
-              openExternalLink("https://www.instagram.com/criterionhomes_/");
+              openExternalLink("https://www.instagram.com/criterionhomesltd/");
             }}
           />
           <Facebook

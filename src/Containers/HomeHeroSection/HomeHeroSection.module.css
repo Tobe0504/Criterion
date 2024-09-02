@@ -42,6 +42,8 @@
   line-height: 70.4px;
   letter-spacing: -0.04em;
   text-align: left;
+  display: block;
+  width: 110%;
 }
 
 .textSection > button {
@@ -129,7 +131,7 @@
 @media screen and (max-width: 767px) {
   .container {
     padding: 53px 32px;
-    min-height: 70vh;
+    min-height: 88vh;
     align-items: flex-start;
     position: relative;
   }

@@ -103,7 +103,7 @@
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -162,7 +162,7 @@
 
 .errorMessage {
   color: var(--red);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -173,7 +173,7 @@
 
 .tip {
   color: var(--grey);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

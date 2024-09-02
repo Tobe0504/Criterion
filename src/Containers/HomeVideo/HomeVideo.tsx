@@ -37,7 +37,7 @@ const HomeVideo = () => {
 
   return (
     <div className={classes.container}>
-      <video controls={false} autoPlay muted ref={videoRef}>
+      <video controls={false} autoPlay loop={true} muted ref={videoRef}>
         <source
           src="https://res.cloudinary.com/dmpdhnjqs/video/upload/v1722662831/IMG_3859_blulhd.mp4"
           type="video/mp4"

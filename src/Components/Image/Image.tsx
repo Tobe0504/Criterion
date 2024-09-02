@@ -63,7 +63,7 @@ const Image = ({
   }, []);
 
   return (
-    <div ref={containerRef} style={{ width: "100%", height: "auto" }}>
+    <div ref={containerRef} className={className as string} style={{ width: "100%", height: "auto" }}>
       {!imageIsLoaded ? (
         <Blurhash
           hash={hash}
@@ -72,14 +72,14 @@ const Image = ({
           resolutionX={32}
           resolutionY={32}
           punch={1}
-          className={className as string}
+
         />
       ) : (
         <img
           src={src}
           alt={alt}
           loading={loading || "lazy"}
-          className={className as string}
+          // className={className as string}
         />
       )}
     </div>

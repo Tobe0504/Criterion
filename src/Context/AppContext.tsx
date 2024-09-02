@@ -76,7 +76,7 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
 
       (contactRef.current as HTMLDivElement).scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: window.innerWidth >= 768 ? "center" : "start",
         inline: "start",
       });
     } else {

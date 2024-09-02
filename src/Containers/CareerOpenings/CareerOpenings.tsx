@@ -13,8 +13,76 @@ const CareerOpenings = () => {
 
   const careers = [
     {
+      title: "Sales",
+      duration: "Hybrid",
+      content: (
+        <div className={classes.content}>
+          <div className={classes.description}>
+            <h4>{"Job Description".toUpperCase()}</h4>
+            <p>
+              The ideal candidate will be responsible for driving sales,
+              building strong client relationships, and promoting our real
+              estate developments. This role requires a proactive and motivated
+              individual who can effectively communicate the value and benefits
+              of Criterion Homes' properties to potential buyers.
+            </p>
+          </div>
+
+          <div className={classes.keyResponsibilitiesAndQualifications}>
+            <div>
+              <h4>{"Key responsibilities".toUpperCase()}</h4>
+              <ul> 
+                <li>Generate and qualify leads.</li>
+                <li>Conduct property tours and presentations..</li>
+                <li>Negotiate and close sales deals.</li>
+                <li>Build and maintain client relationships.</li>
+                <li>Stay informed about market trends and competitor activities.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>{"Qualifications".toUpperCase()}</h4>  
+              <ul>
+                <li>Proven sales experience, preferably in real estate.</li>
+                <li>Excellent communication and negotiation skills.</li>
+                <li>Strong customer service orientation.</li>
+                <li>Ability to work independently and as part of a team.</li>
+                <li>Knowledge of local real estate market is a plus.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={classes.footer}>
+            <p>
+              Interested candidates should submit their resume and cover letter
+              below. <br />
+              Join us in shaping the future of sustainable living at Criterion
+              Homes.
+            </p>
+            <Button
+              type="black"
+              onClick={() => {
+                setDisplayCareerOpeningForm(true);
+              }}
+            >
+              <span>Apply here</span>
+              <svg
+                width="17"
+                height="15"
+                viewBox="0 0 17 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9.50174 0.719482L8.21975 1.99035L13.1245 6.71055H0.638672V8.49466H13.1185L8.21975 13.2091L9.50174 14.48L16.6387 7.59986L9.50174 0.719482Z" />
+              </svg>
+            </Button>
+          </div>
+        </div>
+      ),
+    },
+
+    {
       title: "HR/Admin",
-      duration: "FullTime",
+      duration: "Hybrid",
       content: (
         <div className={classes.content}>
           <div className={classes.description}>
@@ -82,7 +150,7 @@ const CareerOpenings = () => {
 
     {
       title: "Project Manager",
-      duration: "FullTime",
+      duration: "Hybrid",
       content: (
         <div className={classes.content}>
           <div className={classes.description}>
@@ -155,7 +223,7 @@ const CareerOpenings = () => {
     },
     {
       title: "Brand Designer",
-      duration: "FullTime",
+      duration: "Hybrid",
       content: (
         <div className={classes.content}>
           <div className={classes.description}>

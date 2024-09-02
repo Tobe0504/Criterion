@@ -6,7 +6,7 @@
 .uploads {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
 }
 
 .uploads > div {
@@ -23,7 +23,7 @@
   line-height: 17.86px;
   letter-spacing: -0.04em;
   text-align: center;
-  padding: 14px 39px;
+  padding: 14px 24px;
   text-align: center;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@
   .uploads {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 6px;
   }
 
   .uploads > div {
@@ -67,7 +67,7 @@
   .uploads {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 6px;
   }
 
   .uploads > div {
@@ -78,6 +78,6 @@
     font-size: 12px;
     line-height: 15.31px;
     text-align: center;
-    padding: 10px 16px;
+    padding: 10px 4px;
   }
 }

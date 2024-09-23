@@ -95,7 +95,7 @@ const CareerOpeningForm = ({ onClick }: CareerOpeningFormType) => {
         onChange={(e) => inputChangeHandler(e, setFormDetails)}
       />
       <Dropdown
-        options={["HR/Admin", "Project Manager", "Brand Designer"]}
+        options={["HR/Admin", "Project Manager", "Brand Designer", "Sales"]}
         title="POSITION"
         color="#F4F4F4"
         selected={position}

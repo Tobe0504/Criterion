@@ -12,7 +12,7 @@
 
 .container > label {
   color: var(--grey);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@
 
 .container > span:nth-child(2) {
   color: var(--red);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +48,7 @@
 .input > input {
   display: block;
   width: 100%;
-  font-family: "Poppins";
+  font-family: ""Poppins"";
   font-size: 16.62px;
   font-weight: 300;
   line-height: 24.92px;
@@ -110,7 +110,7 @@
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .input > input {
     padding: 12px;
-    font-family: Archivo;
+    font-family: "Poppins";
     font-size: 14px;
     line-height: 23px;
     border-radius: 5px;
@@ -134,7 +134,7 @@
 @media screen and (max-width: 767px) and (max-width: 1023px) {
   .input > input {
     padding: 12px;
-    font-family: Archivo;
+    font-family: "Poppins";
     font-size: 14px;
     line-height: 23px;
     border-radius: 5px;

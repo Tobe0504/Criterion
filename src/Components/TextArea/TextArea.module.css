@@ -12,7 +12,7 @@
 
 .container > label {
   color: var(--grey);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@
 
 .container > span:nth-child(2) {
   color: var(--red);
-  font-family: Archivo;
+  font-family: "Poppins";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -91,7 +91,7 @@
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container > textarea {
     padding: 12px;
-    font-family: Archivo;
+    font-family: "Poppins";
     font-size: 14px;
     line-height: 23px;
     border-radius: 5px;
@@ -111,7 +111,7 @@
 @media screen and (max-width: 767px) and (max-width: 1023px) {
   .container > textarea {
     padding: 12px;
-    font-family: Archivo;
+    font-family: "Poppins";
     font-size: 14px;
     line-height: 23px;
     border-radius: 5px;

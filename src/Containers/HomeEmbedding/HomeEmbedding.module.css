@@ -40,6 +40,8 @@
   max-width: 1198px;
   min-width: 1000px;
   height: 316px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container > div > div {

@@ -1,240 +1,240 @@
 .container {
-  display: flex;
-  align-items: flex-start;
-  gap: 80px;
-  padding: 282px 222px 390px 222px;
-  position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 80px;
+	padding: 282px 222px 390px 222px;
+	position: relative;
 }
 
 .container > div:nth-child(1) {
-  flex-basis: 278px;
+	flex-basis: 278px;
 }
 
 .container > div:nth-child(1) > h4 {
-  font-family: "Space Grotesk";
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 39.68px;
-  letter-spacing: -0.02em;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 39.68px;
+	letter-spacing: -0.02em;
+	text-align: left;
 }
 
 .container > div:nth-child(1) > button {
-  margin-top: 1rem;
-  min-width: 220px;
+	margin-top: 1rem;
+	min-width: 220px;
 }
 
 .container > div:nth-child(2) {
-  flex: 1;
-  width: 100%;
+	flex: 1;
+	width: 100%;
 }
 
 .container > div:nth-child(2) > p {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  margin-bottom: 1rem;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.01em;
+	text-align: left;
+	margin-bottom: 1rem;
 }
 
 .features {
-  display: flex;
-  align-items: flex-start;
-  column-gap: 56px;
-  row-gap: 24px;
-  flex-wrap: wrap;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 56px;
+	row-gap: 24px;
+	flex-wrap: wrap;
 }
 
 .features > div {
-  flex-basis: calc(50% - 53px);
+	flex-basis: calc(50% - 53px);
 }
 
 .features > div > h4 {
-  font-family: "Space Grotesk";
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 22.97px;
-  text-align: left;
-  margin-bottom: 0.5rem;
-  color: #191919;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 22.97px;
+	text-align: left;
+	margin-bottom: 0.5rem;
+	color: #191919;
 }
 
 .features > div > p {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #191919;
+	font-family: 'Poppins';
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: -0.01em;
+	text-align: left;
+	color: #191919;
 }
 
 .container > div > img {
-  width: 1117px;
-  height: 518px;
+	width: 1117px;
+	height: 518px;
 }
 
 .container > div:nth-child(3) {
-  position: absolute !important;
-  right: 0 !important;
-  top: 70% !important;
-  width: 1117px !important;
-  height: 518px !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 70% !important;
+	width: 1117px !important;
+	height: 518px !important;
 }
 
 .container > div > div:not(.features) {
-  position: absolute !important;
-  width: 100% !important;
-  height: 100% !important;
+	position: absolute !important;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .container > div:nth-child(2) > button {
-  margin-top: 2rem;
-  display: none;
+	margin-top: 2rem;
+	display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    gap: 80px;
-    padding: 226px 32px 171px 32px;
-    flex-direction: column;
-  }
+	.container {
+		gap: 80px;
+		padding: 226px 32px 171px 32px;
+		flex-direction: column;
+	}
 
-  .container > div:nth-child(1) {
-    flex-basis: 100%;
-  }
+	.container > div:nth-child(1) {
+		flex-basis: 100%;
+	}
 
-  .container > div:nth-child(1) > h4 {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28.8px;
-    letter-spacing: -0.02em;
-  }
+	.container > div:nth-child(1) > h4 {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 28.8px;
+		letter-spacing: -0.02em;
+	}
 
-  .container > div:nth-child(1) > button {
-    margin-top: 1rem;
-    min-width: 220px;
-  }
+	.container > div:nth-child(1) > button {
+		margin-top: 1rem;
+		min-width: 220px;
+	}
 
-  .container > div:nth-child(2) > p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
+	.container > div:nth-child(2) > p {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
 
-  .features > div {
-    flex-basis: 100%;
-  }
+	.features > div {
+		flex-basis: 100%;
+	}
 
-  .features > div > h4 {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22.97px;
-  }
+	.features > div > h4 {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 22.97px;
+	}
 
-  .features > div > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
+	.features > div > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+	}
 
-  .container > div:nth-child(2) > button {
-    margin-top: 2rem;
-    display: block;
-  }
+	.container > div:nth-child(2) > button {
+		margin-top: 2rem;
+		display: block;
+	}
 
-  .container > div > img {
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0%;
-    width: 80%;
-    height: 176px;
-    margin: auto;
-  }
+	.container > div > img {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0%;
+		width: 80%;
+		height: 176px;
+		margin: auto;
+	}
 
-  .container > div:nth-child(3) {
-    position: absolute !important;
-    right: 0 !important;
-    left: 0 !important;
-    top: 90% !important;
-    width: 80% !important;
-    height: 176px !important;
-    margin: auto !important;
-  }
+	.container > div:nth-child(3) {
+		position: absolute !important;
+		right: 0 !important;
+		left: 0 !important;
+		top: 90% !important;
+		width: 80% !important;
+		height: 176px !important;
+		margin: auto !important;
+	}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    gap: 80px;
-    padding: 226px 32px 171px 32px;
-    flex-direction: column;
-  }
+	.container {
+		gap: 80px;
+		padding: 226px 32px 171px 32px;
+		flex-direction: column;
+	}
 
-  .container > div:nth-child(1) {
-    flex-basis: 100%;
-  }
+	.container > div:nth-child(1) {
+		flex-basis: 100%;
+	}
 
-  .container > div:nth-child(1) > h4 {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28.8px;
-    letter-spacing: -0.02em;
-  }
+	.container > div:nth-child(1) > h4 {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 28.8px;
+		letter-spacing: -0.02em;
+	}
 
-  .container > div:nth-child(1) > button {
-    margin-top: 1rem;
-    min-width: 220px;
-  }
+	.container > div:nth-child(1) > button {
+		margin-top: 1rem;
+		min-width: 220px;
+	}
 
-  .container > div:nth-child(2) > p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
+	.container > div:nth-child(2) > p {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
 
-  .features > div {
-    flex-basis: 100%;
-  }
+	.features > div {
+		flex-basis: 100%;
+	}
 
-  .features > div > h4 {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22.97px;
-  }
+	.features > div > h4 {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 22.97px;
+	}
 
-  .features > div > p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
+	.features > div > p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+	}
 
-  .container > div:nth-child(2) > button {
-    margin-top: 2rem;
-    display: block;
-  }
+	.container > div:nth-child(2) > button {
+		margin-top: 2rem;
+		display: block;
+	}
 
-  .container > img {
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 90%;
-    width: 80%;
-    height: 176px;
-    margin: auto;
-  }
+	.container > img {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 90%;
+		width: 80%;
+		height: 176px;
+		margin: auto;
+	}
 
-  .container > div:nth-child(3) {
-    position: absolute !important;
-    right: 0 !important;
-    left: 0 !important;
-    top: 90% !important;
-    width: 80% !important;
-    height: 176px !important;
-    margin: auto !important;
-  }
+	.container > div:nth-child(3) {
+		position: absolute !important;
+		right: 0 !important;
+		left: 0 !important;
+		top: 90% !important;
+		width: 80% !important;
+		height: 176px !important;
+		margin: auto !important;
+	}
 }

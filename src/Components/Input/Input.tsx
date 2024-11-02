@@ -46,7 +46,7 @@ const Input = ({
     <div className={classes.container} style={style}>
       {label && (
         <>
-          <label htmlFor="">{label}</label>
+          <label htmlFor="">{label} hi</label>
           {"  "}
           {isRequired && <span>*</span>}
         </>

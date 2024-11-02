@@ -11,6 +11,10 @@
   flex: 1;
 }
 
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 /* .container > div > div {
   width: 100% !important;
   object-fit: cover !important;

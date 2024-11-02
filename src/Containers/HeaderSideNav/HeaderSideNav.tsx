@@ -22,6 +22,16 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
   // Router
   const location = useLocation();
 
+  function closeSideNavButtons(){
+    scrollToTheTop();
+    closeSideNav();
+  }
+
+  function closeContactButton(){
+    scrollToRef();
+    closeSideNav();
+  }
+
   return (
     <section className={classes.container}>
       <svg
@@ -50,7 +60,7 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
             <Link
               to={data.route}
               key={i}
-              onClick={scrollToTheTop}
+              onClick={closeSideNavButtons}
               className={`${
                 location.pathname === data.route ? classes.active : undefined
               }`}
@@ -59,7 +69,7 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
             </Link>
           );
         })}
-        <p onClick={scrollToRef}>CONTACT US</p>
+        <p onClick={closeContactButton}>CONTACT US</p>
 
         <Button
           onClick={() => {
@@ -83,7 +93,7 @@ const HeaderSideNav = ({ closeSideNav }: HeaderSideNavProps) => {
         <div className={classes.socialSection}>
           <InstagramIcon
             onClick={() => {
-              openExternalLink("https://www.instagram.com/criterionhomes_/");
+              openExternalLink("https://www.instagram.com/criterionhomesltd/");
             }}
           />
           <Facebook

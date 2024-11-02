@@ -1,263 +1,263 @@
 .container {
-  background: var(--Criterion-Black, #191919);
-  padding: 40px 120px;
+	background: var(--Criterion-Black, #191919);
+	padding: 40px 120px;
 }
 
 .container > div:nth-child(1) {
-  position: relative;
-  top: -170px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 1200px;
-  height: 801.5px;
-  display: block;
+	position: relative;
+	top: -170px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 1200px;
+	height: 801.5px;
+	display: block;
 }
 
 .container > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .container > div:nth-child(1) > div {
-  width: 100% !important;
+	width: 100% !important;
 }
 
 .textSection {
-  margin: 100px 0;
-  padding: 66px 0;
-  display: flex;
-  justify-content: flex-end;
-  border-top: 0.5px solid #f4f4f4;
-  border-bottom: 0.5px solid #f4f4f4;
+	margin: 100px 0;
+	padding: 66px 0;
+	display: flex;
+	justify-content: flex-end;
+	border-top: 0.5px solid #f4f4f4;
+	border-bottom: 0.5px solid #f4f4f4;
 }
 
 .textSection > p {
-  max-width: 789.93px;
-  font-family: "Space Grotesk";
-  font-size: 32px;
-  font-weight: 300;
-  line-height: 39.68px;
-  letter-spacing: -0.02em;
-  color: #f2f2f2;
+	max-width: 789.93px;
+	font-family: 'Poppins';
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 39.68px;
+	letter-spacing: -0.02em;
+	color: #f2f2f2;
 }
 
 .whyWork {
-  border-bottom: 0.5px solid #f4f4f4;
-  display: inline-block;
-  margin-bottom: 92px;
+	border-bottom: 0.5px solid #f4f4f4;
+	display: inline-block;
+	margin-bottom: 92px;
 }
 
 .whyWork > h4 {
-  font-family: "Space Grotesk";
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 64px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  color: #f2f2f2;
+	font-family: 'Poppins';
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 64px;
+	letter-spacing: -0.02em;
+	text-align: left;
+	color: #f2f2f2;
 }
 
 .whyWork > div {
-  display: flex;
-  align-items: stretch;
-  gap: 40px;
-  margin: 4rem 0;
+	display: flex;
+	align-items: stretch;
+	gap: 40px;
+	margin: 4rem 0;
 }
 
 .whyWork > div > div {
-  color: #f2f2f2;
-  width: 212.84px;
+	color: #f2f2f2;
+	width: 212.84px;
 }
 
 .whyWork > div > div > h4 {
-  font-family: "Space Grotesk";
-  font-size: 75px;
-  font-weight: 400;
-  line-height: 66.75px;
-  letter-spacing: -0.04em;
-  text-align: left;
+	font-family: 'Poppins';
+	font-size: 75px;
+	font-weight: 400;
+	line-height: 66.75px;
+	letter-spacing: -0.04em;
+	text-align: left;
 }
 
 .whyWork > div > div > p {
-  font-family: "Space Grotesk";
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22.97px;
-  text-align: left;
-  margin-top: 2rem;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22.97px;
+	text-align: left;
+	margin-top: 2rem;
 }
 
 .imageSection {
-  display: flex;
-  align-items: stretch;
-  gap: 2rem;
+	display: flex;
+	align-items: stretch;
+	gap: 2rem;
 }
 
 .imageSection > div,
 .imageSection > canvas {
-  flex: 1;
-  max-height: 460.98px;
-  object-fit: cover;
+	flex: 1;
+	max-height: 460.98px;
+	object-fit: cover;
 }
 
 .imageSection > div:nth-child(1),
 .imageSection > div:nth-child(3) {
-  flex: 2;
+	flex: 2;
 }
 
 .imageSection > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .imageSection > div:nth-child(2) {
-  flex: 1;
+	flex: 1;
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    padding: 40px 32px;
-  }
+	.container {
+		padding: 40px 32px;
+	}
 
-  .container > div:nth-child(1) {
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: -80px;
-    width: 350px;
-    height: 266.24px;
-  }
+	.container > div:nth-child(1) {
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: -80px;
+		width: 350px;
+		height: 266.24px;
+	}
 
-  .container > div > img {
-    width: 100%;
-    height: 100%;
-  }
+	.container > div > img {
+		width: 100%;
+		height: 100%;
+	}
 
-  .textSection {
-    margin: 16px 0;
-    padding: 24px 0;
-    display: flex;
-    justify-content: center;
-  }
+	.textSection {
+		margin: 16px 0;
+		padding: 24px 0;
+		display: flex;
+		justify-content: center;
+	}
 
-  .textSection > p {
-    max-width: auto;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
+	.textSection > p {
+		max-width: auto;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+	}
 
-  .whyWork {
-    border-bottom: 0.5px solid #f4f4f4;
-  }
+	.whyWork {
+		border-bottom: 0.5px solid #f4f4f4;
+	}
 
-  .whyWork > h4 {
-    font-size: 48px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.whyWork > h4 {
+		font-size: 48px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .whyWork > div {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    gap: 32px;
-    margin: 2rem 0;
-  }
+	.whyWork > div {
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		gap: 32px;
+		margin: 2rem 0;
+	}
 
-  .whyWork > div > div {
-    color: #f2f2f2;
-    width: 100%;
-  }
+	.whyWork > div > div {
+		color: #f2f2f2;
+		width: 100%;
+	}
 
-  .whyWork > div > div > h4 {
-    font-size: 32px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.whyWork > div > div > h4 {
+		font-size: 32px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .imageSection {
-    flex-direction: column;
-    gap: 2rem;
-  }
+	.imageSection {
+		flex-direction: column;
+		gap: 2rem;
+	}
 
-  .imageSection > div {
-    box-sizing: border-box;
-    width: 346.66px;
-    height: 336.24px;
-    max-height: 336.24px;
-  }
+	.imageSection > div {
+		box-sizing: border-box;
+		width: 346.66px;
+		height: 336.24px;
+		max-height: 336.24px;
+	}
 
-  .imageSection > div > img {
-    width: 346.66px;
-    height: 336.24px;
-    object-fit: cover;
-  }
+	.imageSection > div > img {
+		width: 346.66px;
+		height: 336.24px;
+		object-fit: cover;
+	}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    padding: 40px 32px;
-  }
+	.container {
+		padding: 40px 32px;
+	}
 
-  .container > div > img {
-    position: relative;
-    top: -80px;
-    left: 0;
-    right: 0;
+	.container > div > img {
+		position: relative;
+		top: -80px;
+		left: 0;
+		right: 0;
 
-    width: 350px;
-    height: 266.24px;
-  }
+		width: 350px;
+		height: 266.24px;
+	}
 
-  .textSection {
-    margin: 16px 0;
-    padding: 24px 0;
-    display: flex;
-    justify-content: center;
-  }
+	.textSection {
+		margin: 16px 0;
+		padding: 24px 0;
+		display: flex;
+		justify-content: center;
+	}
 
-  .textSection > p {
-    max-width: auto;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
+	.textSection > p {
+		max-width: auto;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+	}
 
-  .whyWork {
-    border-bottom: 0.5px solid #f4f4f4;
-  }
+	.whyWork {
+		border-bottom: 0.5px solid #f4f4f4;
+	}
 
-  .whyWork > h4 {
-    font-size: 48px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.whyWork > h4 {
+		font-size: 48px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .whyWork > div {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    gap: 32px;
-    margin: 2rem 0;
-  }
+	.whyWork > div {
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		gap: 32px;
+		margin: 2rem 0;
+	}
 
-  .whyWork > div > div {
-    color: #f2f2f2;
-    width: 100%;
-  }
+	.whyWork > div > div {
+		color: #f2f2f2;
+		width: 100%;
+	}
 
-  .whyWork > div > div > h4 {
-    font-size: 32px;
-    line-height: 42.24px;
-    letter-spacing: -0.04em;
-  }
+	.whyWork > div > div > h4 {
+		font-size: 32px;
+		line-height: 42.24px;
+		letter-spacing: -0.04em;
+	}
 
-  .imageSection {
-    flex-direction: column;
-    gap: 2rem;
-  }
+	.imageSection {
+		flex-direction: column;
+		gap: 2rem;
+	}
 }
